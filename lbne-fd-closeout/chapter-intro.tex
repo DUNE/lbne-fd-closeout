@@ -2,12 +2,13 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Overview}
-\begin{cdrfigure}[Underground detector illustration]{2x5kt-3d}{The LBNE underground liquid argon detector design as of January of 2015. The design consisted of two liquid argon detector module each with 5~kt fiducial volume.}
-% \includegraphics[width=\textwidth]{2x5kt-3D.pdf}
- \end{cdrfigure}
- \fixme{Missing figure in repo}
+
 
 The former LBNE Far Detector Project team has prepared this design document which describes the single-phase liquid argon time projection chamber (LArTPC) that was being developed for the LBNE experiment. This report reflects the design status of January 2015, which marks the end of the LBNE collaboration and the start of the new DUNE collaboration. As the DUNE collaboration moves forward, it is anticipated that the collaboration will grow and the scope of the experiment will increase. The LBNE detector consisted of two detector modules each with a fiducial volume of 5~kt to be located at the 4850L of the Sanford Underground Research Facility (SURF). Figure~\ref{fig:2x5kt-3d} shows the 3D model of the detector. Throughout this document the detector is referred to as the LAr-FD. 
+
+\begin{cdrfigure}[Underground detector illustration]{2x5kt-3d}{The LBNE underground liquid argon detector design as of January of 2015. The design consisted of two liquid argon detector module each with 5~kt fiducial volume.}
+\includegraphics[width=\textwidth]{2x5kt-3D.pdf}
+ \end{cdrfigure}
 
 The LAr-FD is proposed as the starting point for the design of the DUNE single-phase far detector. The full scope of the DUNE experiment consists of four 10-kt detector modules to reach the desired fiducial mass of 40~kt, which would enable a compelling research program in long-baseline and underground neutrino physics and in nucleon decay studies. The ultimate goal in the operation of the facility and experimental program is to measure fundamental physical parameters, explore physics beyond the Standard Model and better elucidate the nature of matter and antimatter. 
 
@@ -51,10 +52,10 @@ As seen on the left of Figure~\ref{fig:single-phase-overview} the APAs are const
 
 The size of a liquid argon detector is normally %defined by 
 quoted in terms of its mass. However, several metrics are used and need to be clearly defined if comparisons are to be made. The total liquid volume %or 
-and mass of a detector module (cryostat) %the detector is 
-are defined by the total amount of liquid argon contained;% in the cryostat; 
+and mass of a detector module  %the detector is 
+are defined by the total amount of liquid argon contained, % in the cryostat; 
 9.2~kt per cryostat in this case. %for the detector described in this report. 
-Space inside the cryostat is needed for the membrane convolutions \fixme{new term to me}, cryogenic services, installation, the volume of the APAs themselves, and an insulation region for HV protection, which is 0.5~m for the LAr-FD. These volumes reduce the total instrumented volume for each %TPC module 
+Space inside the cryostat is needed for the membrane convolutions, cryogenic services, installation, the volume of the APAs themselves, and an insulation region for HV protection, which is 0.5~m for the LAr-FD. These volumes reduce the total instrumented volume for each %TPC module 
 cryostat to 6.9~kt. Finally, in any physics analysis fiducial volume cuts will need to be applied to the data. The cuts will depend on the physics process itself but for the purpose of defining the detector size, the cuts for the oscillation physics are used. These cuts %applied to the detector volume which 
 lead to a total fiducial mass of two 5-kt detector modules, as shown in Figure~\ref{fig:10kt-fiducial-mass}. A cut of 10~cm on the upstream end of the detector is applied to ensure that a given event originated inside the detector and not from a muon generated in the rock. A cut of 140~cm downstream of the detector is applied so that muon momentum can be determined by multiple scattering. Finally, a cut of 30~cm on each side of the APAs is applied to ensure that a neutrino interacting in the fiducial volume will be sufficiently contained to have a good energy measurement.
 
@@ -104,7 +105,10 @@ An installation and integration detector mock-up will be constructed at Fermilab
 
 \section{Far Detector Requirements}
 
-The requirements for the far detector TPC can be found in the requirements documentation \cite{lar-fd-req} and are summarized here.  
+The requirements for the far detector TPC can be found in the requirements documentation \cite{lar-fd-req} and are summarized in the following sections.  A particularly important requirement for physics studies involving SNB, nucleon decay,
+atmospheric neutrinos and beam neutrinos is reduction of cosmogenic backgrounds. To meet this, 
+ the detector is to be situated at the 4850~ft level of the SURF facility. 
+
 
 \subsection{Detector Requirements: Beam Neutrino Physics}
 
@@ -115,21 +119,16 @@ constraint on the mass hierarchy and the ability to measure
 $\delta_{CP}$, a baseline of 1300~km is needed.
 
 The sensitivity of the experiment scales with the product of the
-fiducial mass, the event-detection efficiency, and the acceptance of
-the event selection requirements. \fixme{acceptance of ... requirements? I don't get it} The fiducial volume cuts are set so
+fiducial mass, the event-detection efficiency, and the efficiency of
+the event selection requirements.  The fiducial volume cuts are set so
 that events with primary vertices within the fiducial volume are
 detected with high efficiency and are contained well enough to
-contribute to the oscillation analysis.  The fiducial volume is
-assumed to be set at least 1.5~m from the far edges of the active
-detector volumes, on the sides of the detectors that the beam exits,
-and 30~cm from the boundaries of the active volumes for all other
-boundaries, \fixme{from all other `sides'?} which are dominantly defined by the field cages.  The
+contribute to the oscillation analysis.  The fiducial volume definition
+is shown in Figure~\ref{fig:10kt-fiducial-mass}.  The
 volume inside the wire planes is to be defined as non-fiducial.
 The event timing for beam-induced neutrino scatters
 shall be precise enough to correlate the events with the
-beam spill times.  % do we want to measure neutrino speed?  We have the longest baseline.
-
-% These requirements are from Table 4.2 in the Scientific Opportunities document
+beam spill times.  
 
 Events will be selected and classified in order to reduce the
 backgrounds of the analyses and to focus attention on only those
@@ -313,11 +312,10 @@ from multiple scattering requirement to be met.
 
 \subsection{Engineering Requirements}
 
-In order to reduce the cosmogenic backgrounds for SNB, nucleon decay,
-atmospheric neutrinos and beam neutrinos, the detector is to be situated
-at the 4850~ft level of the SURF facility. \fixme{The prev sounds like a physics req} The far detector underground hall shall
+
+In order to limit radiological contamination from dust in the detector, the far detector underground hall shall
 accommodate the construction of a class 100,000 clean room for detector
-construction. \fixme{say why clean env needed; LAr purity issues?}  Concrete floors shall be sealed in %areas of 
+construction.   Concrete floors shall be sealed in %areas of 
 clean room environments
 and in the high bay of the cavern.  Showers are to be provided for workers underground
 to remove dust and debris.  A solid waste disposal station consisting of a pad
@@ -331,13 +329,11 @@ one shaft becomes inoperable, the other shaft is required to provide egress, ing
 and sufficient services to ensure the safety of the staff and equipment.
 Sufficient airflow is required to reduce buildup of radioactive radon gas.
 
-\fixme{More requirements -- safety? TJ?}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Principal Parameters}
 
 The principal parameters of the LAr-FD are given in Table~\ref{tab:param-summ-larfd}. 
-\fixme{This is for the closeout LBNE design -- 10-kt detector is 5+5?}
+
 \begin{cdrtable}[LAr-FD Principal Parameters for 10-kt Detector]{lp{7cm}}{param-summ-larfd}
 {LAr-FD Principal Parameters for 10-kton Detector}
 Parameter & Value \\ \toprowrule
@@ -384,7 +380,7 @@ approximately ten adjacent wires for a 10-MeV electron.  Counting
 short protons near the interaction vertex requires good resolution for
 short tracks.  Furthermore, ambiguities in associating features between
 planes become easier to break when the spatial resolution is better.%
-\fixme{could put this later. TJ?}
+%\fixme{could put this later. TJ?}
 
 If hits can be unambiguously reconstructed and associated between
 planes, then only two wire planes are required to reconstruct events
@@ -413,9 +409,7 @@ collection-plane wires, therefore low noise is important, though
 induction-plane wires provide additional measurements of the same
 drifting charge.
 
-% cite LBNE-docdb-9374 -- wire angle change request, 8981 and 9886,
-% the tech board meeting documents -- trade study
-\fixme{Is this new or old? cite LBNE-docdb-9374 -- wire angle change request, 8981 and 9886,
+\fixme{Anne to add refs:  cite LBNE-docdb-9374 -- wire angle change request, 8981 and 9886,
  the tech board meeting documents -- trade study}
 
 A study of wire orientation~\cite{docdb2836} was performed that uses
@@ -441,25 +435,23 @@ particular collection-plane wire more than once, then the ambiguity is
 unresolvable with two readout planes; a third one is then required, with
 a slightly different angle so as to to create repeated solutions of
 three wires intersecting.  Even with the proposed 44.3$^\circ$ and
-45.7$^\circ$ solution of the initial design, however, ambiguities
+45.7$^\circ$ solution of the initial (2012) design, however, ambiguities
 resurface when multiple hits arrive on different wires at similar
-times.  Misassociating hits between views can result in %have the consequence of
+times.  Misassociating hits between views can result in 
 displacement of the 3D reconstructed location of the charge
 deposit by the vertical distance required to wrap an induction-plane
-wire around once; this is approximately five meters in the CD-1 design.
- \fixme{Can we say ``LBNE'' design? CD-1 vs `CD-1 refresh' might be confusing}
+wire around once; this was approximately five meters in the 2012 design.
+% \fixme{Can we say ``LBNE'' design? CD-1 vs `CD-1 refresh' might be confusing}
 Even with the most sophisticated reconstruction algorithms, it is
 expected that even a small fraction of misassigned hits will create
 difficulties in energy reconstruction, track identification and
 particle ID, which may be difficult to simulate to the accuracy
 required by the physics program.
-\fixme{Is it necessary to go into the problems of the earlier design? I guess it's a way to describe the issue,
-but seems like TMI}
 
 In order to reduce the impact of hit-assignment ambiguity on
 reconstruction, an angle of $\pm35.71^\circ$ was chosen for the
 induction-plane wires~\cite{docdb-9374,docdb8981,docdb9886}.  The APA
-design with this angle improves on the CD-1 \fixme{ditto} design in a number of
+design with this angle improves on the CD-1 design in a number of
 ways.  The length of the APA is shorter at 6~meters, allowing it to be
 stiffer using the same materials.  The 2.3-meter APA width was chosen
 to facilitate construction and allow standard, over-the-road
@@ -472,16 +464,7 @@ were further constrained by the desire to have an integer multiple of
 front-end boards.  In this design, the collection-plane wires are 6~m
 long and the induction-plane wires are 7.3~m long.
 
-The choice of cryostat width is based on the desired cryostat shape
-and cavern span. From a cryogenics standpoint, the ideal cryostat for
-a modular TPC would be a cube, since membrane-cryostat capital and
-operating costs scale linearly with the surface area. This shape is
-not ideal for cavern excavation, however. In the absence of a
-geotechnical investigation for the cavern location, the cavern span
-has been limited to $\sim$30~m on the advice of rock engineers. \fixme{No geotech investigation
-at this site?} A
-detector width of 14~m results after making allowance for cryostat
-insulation and personnel access both above and within the cryostat.
+% pgraph removed here per Jim Stewart
 
 A drift field of 500~V/cm was chosen based on experience from similar
 detectors such as ICARUS, ArgoNeuT and the Fermilab cosmic-ray test
