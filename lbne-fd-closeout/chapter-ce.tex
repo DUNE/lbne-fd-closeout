@@ -84,9 +84,9 @@ that create an electrical connection.
 \section{Architecture}
 \label{sec:fe_arch}
 
-The CE architecture is manifested in the Cold Mother Board assembly (CMB),
+The CE architecture is manifested in the Front End Mother Board assembly (FEMB),
 which consists of an analog mother board with a digital ASIC mezzanine (Figure~\ref{fig:elect_schem}).
-Each APA is instrumented with 20 CMBs, for a total of 2,560 channels per APA.
+Each APA is instrumented with 20 FEMBs, for a total of 2,560 channels per APA.
 
 The analog mother board is instrumented as a 128-channel board which uses eight 16-channel FE ASICs,
 eight 16-channel ADC ASICs, low-voltage regulators, and input-signal protection.
@@ -96,16 +96,17 @@ and an 8:1 Mux stage with two pairs of serial readout lines in parallel.
 This has already been prototyped and tested,
 using a commercial FPGA to perform the role of the digital ASIC (Figure~\ref{fig:elec_CMBpix}).
 
-\begin{cdrfigure}[The CE Architecture]{elect_schem}{The CE Architecture. The basic unit is the 128-channel CMB}
+\begin{cdrfigure}[The CE Architecture]{elect_schem}{The CE Architecture. The basic unit is the 128-channel FEMB}
 \includegraphics[width=\linewidth]{elect_schem.pdf}
 \end{cdrfigure}
 
-\begin{cdrfigure}[The Cold Mother Board (CMB), as used in the early set of tests]{elec_CMBpix}{The Cold Mother Board (CMB), as used in the early set of tests.
+\begin{cdrfigure}[The Front End Mother Board (FEMB), as used in the early set of tests]{elec_CMBpix}
+{The Front End Mother Board (FEMB), as used in the early set of tests.
   {\bf Top:} The analog mother board, showing four ADC ASICs and four FE ASICs surface mounted.
   The other side of the board has another four ADC and FE ASICs.
   Except for anticipated small modifications, this board is essentially the final version.
   {\bf Middle:} The FPGA mezzanine, used in place of the digital ASIC mezzanine for the early set of tests.
-  {\bf Bottom:} The complete CMB assembly as used in the early set of tests.
+  {\bf Bottom:} The complete FEMB assembly as used in the early set of tests.
   The uppermost mezzanine board is the cable connection.}
 \includegraphics[width=0.65\linewidth]{elec_CMBpix1.pdf}
 \includegraphics[width=0.65\linewidth]{elec_CMBpix2.pdf}
@@ -344,7 +345,7 @@ The fabrication and installation was successfully completed in early 2014, and n
 a total of 8,256 channels (516 FE ASICs) instrument the MicroBooNE TPC. 
 A total of 2,048 channels (on 128 FE ASICs and 128 ADC ASICs) are used to instrument the 35-ton 
 LArTPC.
-The cold front-end mother boards have been produced and tested at 300~K and are currently
+The FEMBs have been produced and tested at 300~K and are currently
 being tested at 77~K before final installation. % on the TPC.
 
 
@@ -367,11 +368,11 @@ automated place-and-route for design blocks using extensive digital logic.
 A block diagram of the COLDATA ASIC is presented in Figure~\ref{fig:elec_COLDATAfig}.
 The major components of the COLDATA ASIC include a downlink which is required to receive the system clock and
 the control/download information transmitted from the DAQ.
-The download data must be transmitted to the FE and ADC ASICs on the CMB.
+The download data must be transmitted to the FE and ADC ASICs on the FEMB.
 The system clock will provide a frequency reference to a crystal-based Phase Lock Loop (PLL)
 which will generate a low-jitter stable clock to the high-speed serializer.
 
-A single COLDATA ASIC on each CMB will also be receiving the data from each of the eight ADCs on a board.
+A single COLDATA ASIC on each FEMB will also be receiving the data from each of the eight ADCs on a board.
 Each ADC will transmit two streams of data at 192~Mbps for a total data input of 3.072~Gbps.
 All data will be transmitted off-board to DAQ.
 Twelve bits of ADC data per APA channel every 500~ns yields a single-channel bit rate of 0.024~Gbps.
@@ -573,8 +574,8 @@ and another such board is currently being designed for the ADC ASIC.
 The development of the FE and ADC ASICs has proceeded through a series of prototype designs.
 A 128-channel prototype analog mother board has been developed and tested in the lab.
 Together with an FPGA mezzanine in place of the digital ASIC mezzanine,
-they form a front-end cold mother board assembly for use in the 35-ton prototype TPC.
-A test stand has been developed to test the front-end mother board assembly
+they form a FEMB for use in the 35-ton prototype TPC.
+A test stand has been developed to test the FEMB
 using a commercial FPGA evaluation board as a mini-DAQ system.
 All evaluation test data are stored on a desktop PC and analyzed to
 determine whether the board is ready to be installed on the detector.
