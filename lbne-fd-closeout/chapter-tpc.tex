@@ -19,19 +19,20 @@ vessel and is completely submerged in liquid argon at 89~K. The TPC consists of 
 assemblies (APAs) and cathode plane assemblies (CPAs), with field-cage panels enclosing the four open sides between the anode and cathode planes.
 When proper bias voltages are applied to the APAs and CPAs, a uniform electric field is created in volume between the anode and cathode planes. A charged particle traversing this volume leaves a trail of 
 ionization in the ultra-pure liquid argon.  The electrons drift toward the anode wire planes, inducing electric current signals in the front-end electronic circuits connected to the sensing wires.  The current 
-signal waveforms from all sensing wires are amplified and digitized by the front-end electronics, and transmitted to the data acquisition system outside of the cryostat.
+signal waveforms from all sensing wires are amplified and digitized by the front-end electronics, and transmitted to the data acquisition system (Chapter~\ref{ch:trig}) outside of the cryostat~\cite{cryo_10719}.
 
-The front-end mother boards and digital multiplexer boards from the Cold Electronics subsystem (Chapter~\ref{ch:ce}) are directly mounted on the APAs as part of the APA assembly (shown in Figure~\ref{fig:elec_CMBonAPA}).  The Photon Detectors are also mounted 
-inside the APAs' frame openings before the APAs are installed into the cryostat. The TPC subsystem also interfaces to the cryostat and cryogenic subsystem through the TPC mounting fixtures, and to the DAQ 
-subsystem through the signal feedthroughs.  The installation of the TPC inside the cryostat is the responsibility of the Installation subsystem (Chapter~\ref{ch:install}).
+The front-end mother boards and digital multiplexer boards from the Cold Electronics subsystem (Chapter~\ref{ch:ce}) are directly mounted on the APAs as part of the APA assembly (shown in Figure~\ref{fig:elec_CMBonAPA}).  The Photon Detectors (Chapter~\ref{ch:photon}) are also mounted 
+inside the APAs' frame openings before the APAs are installed into the cryostat. The TPC subsystem also interfaces to the cryostat and cryogenics system~\cite{cryo_10719} through the TPC mounting fixtures, and to the DAQ 
+subsystem through the signal feedthroughs.   The installation of the TPC inside the cryostat is the responsibility of the Installation subsystem (Chapter~\ref{ch:install}).
 
-\begin{cdrfigure}[Cross section of the TPC inside the cryostat]{tpc-xsect1}{Cross section of the 5-kt fiducial mass TPC inside the cryostat.  The length of the TPC is  30~m along the direction of the neutrino beam (into the paper)}
+\begin{cdrfigure}[Cross section of the TPC inside the cryostat]{tpc-xsect1}{Cross section of the 5-kt fiducial mass LBNE TPC inside the cryostat.  The length of the TPC is  30~m along the direction of the neutrino beam (into the paper)}
 \includegraphics[width=\linewidth]{ELBNF_FD_Cross_Section.pdf}
 \end{cdrfigure}
 
 
 The TPC's active volume (Figure~\ref{fig:tpc-xsect1}) is 12~m high, 14~m wide and 30~m long in the beam direction. 
-Its three rows of CPA planes interleaved with two rows of APA planes 
+Its three rows of CPA planes interleaved with two rows of APA planes~\footnote{Note that the APA and 
+CPA positions are exchanged in the DUNE design.} 
 are oriented vertically, with the planes parallel to the beamline. The  
 electric field is applied perpendicular to the planes.
 The maximum electron-drift distance between a cathode and an adjacent 
@@ -39,7 +40,7 @@ anode is 3.4~m. The anode plane assemblies are
 2.3~m wide and 6~m high. Two 6-m modules stack vertically to 
 instrument the 12-m active depth. In each row, 13~such stacks are placed 
 edge-to-edge 
-along the beam direction, forming the 30-m active length of the detector.  Each CPA has the same width, but half the height ($\sim$3~m) as an APA, for ease of assembly and transportation.  Four CPAs will be stacked vertically to form the full 12-m active height. 
+along the beam direction, forming the 30-m active length of the detector.  Each CPA has the same width, but half the height ($\sim$3~m) as an APA, for ease of assembly and transportation.  Four CPAs stack vertically to form the full 12-m active height. 
 Each cryostat houses a total of 52~APAs and 156~CPAs.
 Each facing pair of cathode and anode rows is surrounded by a 
 ``field cage,'' assembled from panels of FR-4 sheets with parallel copper strips connected to resistive divider networks. 
@@ -64,13 +65,13 @@ During installation, two APAs are interconnected on their non-readout ends, leav
 \section{Design Considerations} 
 \label{sec:v5-tpc-reqs-n-specs}
 
-The requirements for the TPC can be found in the requirements documentation \cite{lar-fd-req}. The most significant ones are the following. The TPC must:
+The requirements for the TPC can be found in the requirements documentation \cite{lar-fd-req}. The most significant ones are the following. The TPC shall:
 
 \begin{itemize}	
 \item Provide the means to detect charged particles in the detector and transmit the detector signals to the Data Acquisition System (DAQ)
 \item Meet the physics requirement for electron/photon discrimination;  the TPC wire spacing will be $<$~5~mm
 \item Limit variation in the wire sag to $<$ 0.5~mm such that it does not significantly impact the position and energy resolution of the detector
-\item Provide redundancy in the discrimination of electrons from photon conversions and ensure long-term reliability over the life of the experiment;  configuration will use three instrumented wire planes
+\item Provide redundancy in the discrimination of electrons from photon conversions and ensure long-term reliability over the life of the experiment;  the configuration will use three instrumented wire planes
 \item Optimize the measurement of high-energy and low-energy tracks from accelerator-neutrino interactions; the wire-plane orientation is optimized for neutrinos in the LBNE energy range
 \item Enable the detector to distinguish a Minimum Ionizing Particle (MIP) from noise with a signal-to-noise ratio $>$ 9:1
 \item Enable the detector to measure the ionization up to 15 times that of a MIP particle; this is necessary to perform particle identification of stopping kaons from proton decay
@@ -90,7 +91,7 @@ plans meet verification and validation requirements. The most significant challe
 cryogenic environment. The TPC architecture will handle the cryogenic thermal cycles, accommodate the 
 cryostat roof motion, and mitigate potential microphonics noise generated by wire vibrations.
 
-The design approach will take inputs from several sources.  These sources include requirements from the scientific collaboration to ensure integrity of the physics data, studies of what has been successful in smaller scale TPCs, sharing of knowledge, ideas, and concepts with others in the LArTPC community, and analysis and evaluation of the performance of the 35-t prototype.  These inputs will be distilled into functional requirements.  These functional requirements will be used to define alternative concepts or architectures for the TPC, which in turn will drive preliminary requirements for the TPC interface with the cryostat and the conventional facilities.  They will also be used to define the preliminary interface requirements between the structural components and the modular subassemblies of the TPC.  These alternate concepts will be tested and analyzed as needed, and reviewed with the physicists, conventional facilities engineers, the cryostat manufacturer and the TPC engineers.  Based on analysis and feedback, the preferred concept will be further developed and detailed into final requirements and specifications for the physical internal and external interfaces.  These requirements and specifications will be clearly communicated to the responsible engineering groups.
+The design approach will take inputs from several sources.  These sources include requirements from the scientific collaboration to ensure integrity of the physics data, studies of what has been successful in smaller scale TPCs, sharing of knowledge, ideas, and concepts with others in the LArTPC community, and analysis and evaluation of the performance of the 35-t prototype (Sections~\ref{35tonprototype} and~\ref{sec:35t-ph2}).  These inputs will be distilled into functional requirements.  These functional requirements will be used to define alternative concepts or architectures for the TPC, which in turn will drive preliminary requirements for the TPC interface with the cryostat and the conventional facilities.  They will also be used to define the preliminary interface requirements between the structural components and the modular subassemblies of the TPC.  These alternate concepts will be tested and analyzed as needed, and reviewed with the physicists, conventional facilities engineers, the cryostat manufacturer and the TPC engineers.  Based on analysis and feedback, the preferred concept will be further developed and detailed into final requirements and specifications for the physical internal and external interfaces.  These requirements and specifications will be clearly communicated to the responsible engineering groups.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  AH to here 3:33 3/5
@@ -109,11 +110,11 @@ The wires used in the TPC must provide:
 \item Good conductivity to minimize noise contribution to the front-end electronics
 \item A thermal-expansion coefficient comparable to that of the stainless-steel 
 frame to avoid tension change after cool-down
-\end{itemize}
+\end{itemize} %%%%%%%%%%%%%% Anne 4/22
 
 Both stainless-steel and copper-beryllium (CuBe) wires are potential candidates.  
-Stainless steel was the choice of ICARUS, while a copper-plated 
-stainless-steel wire was chosen by MicroBooNE  (to reduce resistance).  Both experiments use a wire-termination 
+Stainless steel was the choice of ICARUS~\cite{Icarus-T600}, while a copper-plated 
+stainless-steel wire was chosen by MicroBooNE~\cite{microboonecdr} (to reduce resistance).  Both experiments use a wire-termination 
 technique that is labor-intensive and impractical for LAr-FD. Previous experience from FNAL \cite{FNAL-proto-APA} has shown that a CuBe wire under 
 tension can be reliably bonded to a copper-clad G10/FR4 (glass epoxy material) surface by a combination of  epoxy (mechanical bonding) 
 and solder (electrical connection).  This bonding technique greatly simplifies the electrical 
