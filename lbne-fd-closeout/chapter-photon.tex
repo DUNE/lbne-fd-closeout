@@ -3,18 +3,19 @@
 \section{Introduction}
 
 \fixme{In our 2012 CDR we started each chapter with:  The scope of the (whichever) subsystem includes the design, procurement, fabrication, testing, delivery and installation of the mechanical and high voltage components of the (blah); followed by list of components -- see the TPC chapter. At this late date, not sure it's worth it...}
+\fixme{Carlos: I have difficulty finding most of the numbers representing the expected performance of the photon detection system. Therefore the majority of my fixme's are related to this central question: where can we find the benchmarking for the PD?}
 
 
 Liquid argon is an excellent scintillating medium. With an average
 energy needed to produce a photon of 19.5~eV (at zero field) a typical
 particle depositing 1~MeV in liquid argon will generate 40,000~photons
-with wavelength of 128~nm. At higher fields this will be reduced but
+with a wavelength of 128~nm. At higher fields this will be reduced but
 at 500~V/cm the yield is still about $\sim$20,000~photons per
 MeV. Roughly 1/3 of the photons are promptly emitted after about 6~ns
 while the rest are are emitted with a delay of 1100-1600~ns. LAr
 is highly transparent to the 128~VUV photons with a Rayleigh
-scattering length and absorption length of 95~cm and >200~cm
-respectively. The relatively large light yield makes the scintillation
+scattering length and absorption length of \fixme{Carlos:the latest result is 55 cm}95~cm and >200~cm
+respectively~\cite{bib:gracearxiv}. The relatively large light yield makes the scintillation
 process an excellent candidate for determination of $t_{0}$ for
 non-beam related events. Detection of the scintillation light may also
 be helpful in background rejection.
@@ -24,17 +25,17 @@ be helpful in background rejection.
 \subsection{Beam-based physics}
 
 There are no requirements for the beam-based physics program, as the
-machine clock will provide a $t_{0}$ with roughly 10 $\mu$s
+\fixme{Carlos: accelerator clock is better than machine clock}machine clock will provide a $t_{0}$ with roughly 10 $\mu$s
 resolution. Given that the electron drift is 1.6 mm/$\mu$s the
-uncertainty to the electron lifetime correction is small is \fixme{when?} the beam
+uncertainty to the electron lifetime correction is small is %\fixme{when?Carlos: yes, when} the beam
 timing is used. The photon system can be useful in determining the
 $t_{0}$ of cosmic ray events and events from radiological decays as
 well as giving a handle to the location of beam events in the LAr
 volume with respect to fiducial boundaries. The impact of the LAr
 scintillation light on the detector performance needs to be
-determined, but it is not expected that the reduction in backgrounds
-for the oscillation program will introduce additional requirements to
-the photon system design.
+determined,\fixme{Carlos:the negative at the beginning makes it sound strange, better move the not and rephrase it a bit: but it is expected that its role in reducing backgrounds
+for the oscillation program will not introduce additional requirements to
+the photon system design.}
 
 \subsection{Proton Decay and Atmospheric Physics}
 
@@ -42,8 +43,8 @@ The photon detector system must provide the t$_0$ for non-beam related
 physics channels if a correction for electron recombination during
 drift is to be applied. The requirements for electronics and hadronic
 energy resolution for the proton decay and the atmospheric neutrino
-program are $1\% / \sqrt{E(GeV)} \bigoplus 1\%$ and $30\% /
-\sqrt{E(GeV)}$ respectively. With these resolutions the collected
+program are\fixme{Carlos: I can not find where these numbers come from $1\% / \sqrt{E(GeV)} \bigoplus 1\%$ and $30\% /
+\sqrt{E(GeV)}$} respectively. With these resolutions the collected
 charge must be accurately corrected for recombination. Therefore the
 photon system must provide a $t_{0}$ for particles with >100 MeV with
 >95\% efficiency in the fiducial volume of the detector.
@@ -56,14 +57,14 @@ electrons to be 20\% using only TPC information and assuming a highly
 efficient trigger and an electron lifetime of 5 ms. The impact of
 various detector resolutions on the physics potential of LBNE has not
 been studied in detail. At present there is no strong requirement that
-the energy resolution %must 
+the energy resolution %\fixme{Carlos: yes, we need must} %\must 
 be better than 20\%, so no requirement on
 the photon system trigger efficiency is set at this time. However it
-is clear that if a detector design can be found, \fixme{clarify `detector design can be found'} the energy resolution
+is clear that if a detector design can be found, \fixme{clarify `detector design can be found'}%\fixme{Carlos': I propose that we write: if a better detector design, with higher photon collection efficiency, can be found then the energy resolution could be significantly improved}
 would greatly improve. A goal of the photon detection R\&D is to
 develop a system with the lowest possible threshold for a reasonable
-cost. At the %time of the 
-start of final design, a final decision as to the
+cost. At the %time of the %\fixme{Carlos: ok}
+start of %\the final%\definitive design, a final decision as to the
 configuration will need to be made based on cost and added physics
 capability.
 
@@ -74,7 +75,7 @@ of the photon detection system must be understood. The prototype
 readout electronics described in Section~\ref{sec_elec} have been
 shown to detect the single photoelectron (p.e.) signals associated with the late
 scintillation light but future versions may sacrifice this ability to
-mitigate high channel costs. It is assumed that the physics goals of
+mitigate high channel costs %\fixme{Carlos: we should say how we intend to mitigate high channel costs}. It is assumed that the physics goals of
 the photon detection system will be met using the prompt
 scintillation light.
 
@@ -141,7 +142,7 @@ acceptance correction.
 In the event that higher photon collection efficiencies can be
 achieved it should be possible to improve the energy resolution of the
 detector by adding the photon yield to the electron yield information.
-However this requires several orders of improvement in light
+However this requires several orders of \fixme{Carlos: magnitude} improvement in light
 collection efficiency, so it is beyond the scope of the present design.
 
 \section{Photon Detector Prototype Designs}
@@ -159,7 +160,7 @@ been developed in an effort to optimize coverage, cost and attenuation length.
 The reference design for the photon detection system is based on light
 guides that are coated with wavelength shifter. The 128-nm
 scintillation photons from liquid argon interact with the wavelength
-shifter on the light guide surface and 430-nm light is re-emitted in
+shifter on the light guide surface and \fixme{Carlos: peaking at 430-nm light is re-emitted} in
 the bar.  The light guide channels the light to photodetectors at its
 end.
 
@@ -225,7 +226,7 @@ For the acrylic light guides, the WLS must be embedded in the plastic
 at the bar's surface so that 128-nm scintillation photons can generate
 optical 430-nm photons within the volume of the plastic.  Otherwise
 the VUV photons will not be trapped by the light guide.  For the Eljen
-bars, the wavlength shifter can either be embedded in the plastic, as
+bars, the wavelength shifter can either be embedded in the plastic, as
 with the acrylic, or it can be deposited on a plate or film placed in
 proximity to the light guides.  The J2 wavelength shifter then
 converts the resulting 430-nm photons inside the light guides where
@@ -235,7 +236,7 @@ To embed the WLS at the surface of the light guides, a ``dip-coating''
 process was developed at Indiana University.  Before the WLS was
 applied to the acrylic bars, the bars were annealed at 80$^\circ$C for one
 hour.  (The Eljen bars were not annealed.)  The WLS was dissolved in the
-organic solvent dichlormethane (CH$_2$Cl$_2$).  For these waveguides
+organic solvent\fixme{Carlos: dichlormethane (DCM)} (CH$_2$Cl$_2$).  For these waveguides
 5~g of wavelength shifter was dissolved in 1,000~gm of DCM.  A
 series of experiments showed that this concentration was optimum.  A
 bar was first dipped into the WLS mixture for 15 seconds and then
@@ -257,7 +258,7 @@ scaled to 1.5~m.
 %At LSU, Thomas Kutter and his team have 
 The LSU team has developed a VUV photon detector
 design for a large LAr detector that overcomes some of the
-shortcomings of the present LBNE reference design photon detectors. The LSU
+shortcomings of the present LBNE baseline \fixme{define `baseline' here; do you mean `reference design'?}%\fixme{Carlos: yes} photon detectors. The LSU
 photon detector design allows for coverage of a very large area, thereby
 increasing the geometrical acceptance of the photon detectors. The
 number of required SiPMs and readout channels per unit detector area
@@ -288,14 +289,14 @@ well matched to the peak photon detection efficiency of typical SiPMs.
 \includegraphics[width=0.45\linewidth]{LSU_panel_prototype.png}
 \end{cdrfigure}
 
-
+\fixme{Carlos: there is an asymmetry in the sections describing each of the designs: some of the subsections, like the ones describing the LSU and the CSU designs, go into details of the tests that were performed while the IU design receives no such treatment. I think this should be standardized for all designs}  
 
 \subsection{LSU Photon detection panel production}
 
 The photon detection panels are produced from 0.25-inch-thick
 sheet UVT acrylic and cut to size. For a first series of prototypes
 the acrylic panel dimensions were chosen to closely match the area of
-four bars of the LBNE reference design photon detection system.  The groove is
+four bars of the LBNE baseline \fixme{reference?} photon detection system.  The groove is
 cut with a CNC mill in several passes to achieve good groove surface
 quality, which is important for good light transmission from the bulk
 acrylic to the fiber. The panels are dip coated with TPB and left to
@@ -307,7 +308,7 @@ The end caps of the mechanical frame
 house one SiPM on either end. The presently used $6\times6 mm^2$ active-area
 SiPMs are spring-mounted to ensure good contact between the active area
 and the fiber ends.  The leads of the SiPMs are connected to a small
-PCB \fixme{define} onto which $\sim$2-m-long twisted-pair coax cables are soldered to
+Printed Circuit Board (PCB) \fixme{define} %\fixme{Carlos: done} onto which $\sim$2-m-long twisted-pair coax cables are soldered to
 supply the SiPM with a bias voltage and to read out signals. The other
 cable ends are typically connected to pre-amplifiers before leading to
 a DAQ system.  Components for the photon detection panels are
@@ -325,7 +326,7 @@ at room temperature.
 
 \subsection{Proof-of-Concept and Prototype Detector Results}
 
-Several photon detector panels of $20 \times 4.33 in^2$ have been
+Several photon detector panels of $20 \times 4.33~in^2$ have been
 produced and two have been tested in a LAr test stand at CSU. The
 detectors submitted to the cold test have three and two embedded fibers,
 respectively, but are otherwise produced in the same way. The data
@@ -352,7 +353,7 @@ that the purity for both measurements was very similar.
 \end{cdrfigure}
 
 %
-\paragraph{Cosmic trigger runs:} Two $ 1" \times 10"$ wide scintillator counters were placed above and below the dewar to form a muon hodoscope and to select near-vertical muons traversing the LAr volume. The three-fiber LSU panel and one LBNL/Elgin Bis-MSB doped polystyrene bar of LBNE reference design dimensions and read out by three SiPMs were simultaneously inserted in the LAr. The setup allowed the study of the response of these photon detectors to scintillation light created by penetrating cosmic muons. A detailed quantitative comparison of the relative light yield was not possible with this setup due to large systematic uncertainties in the position dependence of the scintillation light generation by the triggering cosmic muons. A qualitative comparison of the detector responses, taken as the signal sum of three and two SiPMs for the Elgin bar and the LSU panel, respectively, shows comparable light yields as shown in Figure~\ref{fig:3-LSU}. 
+\paragraph{Cosmic trigger runs:} Two $ 1" \times 10"$ wide scintillator counters were placed above and below the dewar to form a muon hodoscope and to select near-vertical muons traversing the LAr volume. The three-fiber LSU panel and one LBNL/Elgin Bis-MSB doped polystyrene bar of LBNE baseline dimensions and read out by three SiPMs were simultaneously inserted in the LAr. The setup allowed the study of the response of these photon detectors to scintillation light created by penetrating cosmic muons. A detailed quantitative comparison of the relative light yield was not possible with this setup due to large systematic uncertainties in the position dependence of the scintillation light generation by the triggering cosmic muons. A qualitative comparison of the detector responses, taken as the signal sum of three and two SiPMs for the Elgin bar and the LSU panel, respectively, shows comparable light yields as shown in Figure~\ref{fig:3-LSU}. 
         
 %
 %
@@ -425,10 +426,10 @@ address this reduction would be to populate the PD system with half-length
 paddles. However, this would lead to an increase in the number of readout
 channels, and readout
 electronics is the driving cost of the photon detector system. While it may be possible to combine readout channels to
-mitigate the increase in overall number, a more desirable soultion
-would be to address the attenuaton length issue.  \fixme{by `address' do you mean make it longer?} 
+mitigate the increase in overall number, a more desirable solution
+would be to address the attenuaton length issue.  \fixme{by `address' do you mean make it longer?}%\fixme{Carlos my proposal:..solution would be to improve the light transmission in the waveguides, ie. increasing the attenuation length} 
 
-To mitigate the reduced attenuation length in TPB-doped or -coated acrylic and polystyrene,
+To mitigate%\fixme{Carlos: improve rather than mitigate-used many times} the reduced attenuation length in TPB-doped or -coated acrylic and polystyrene,
 %that have been either doped with or coated with TPB, 
 the CSU group has
 been developing an alternative design based on UV-to-blue
@@ -465,12 +466,12 @@ showed that the front row of fibers collected
 twice as much light as the back row, thus
 only a single row
 design can be considered --- this is currently under development. The current design
-utilizes two single rows of fibers back-to-back with layers of \fixme{opaque?} Tyvek
+utilizes two single rows of fibers back-to-back with layers of \fixme{opaque?}%\fixme{Carlos: no need to say opaque} Tyvek
 diffuse reflector between them.
 
 %Another benefit of this design is that an arrangement with back-to-back rows of fibers separated by an opaque relector arranged would then
 
-In this design \fixme{what? the fiber bundles?} would face into different TPC cells, allowing additional information to be
+In this design \fixme{what? the fiber bundles?} %\fixme{Carlos: yes}would face into different TPC cells, allowing additional information to be
 used in the disambiguation of the TPC signals coming from wire
 wrapping on the APA frames. \fixme{signals coming from wire wrapping? How about `signals coming from wires on the APA frames'?}
 If the walls of the detector were to be 
@@ -515,7 +516,7 @@ section of this chapter. \fixme{ref section}
 
 Silicon Photomultipliers (SiPMs) have been selected as the reference design  photon
 detectors for the far detector LArTPC.% photon detection system. 
-\fixme{Do we say `a sipm' or `sipm technology'? Plain `sipm' sounds funny.} A SiPM is
+\fixme{Do we say `a sipm' or `sipm technology'? Plain `sipm' sounds funny.}%\fixme{Carlos:yes,  it is standard terminology, right?} A SiPM is
 a photo detection device sensitive to single photons with excellent
 linearity range \fixme{`linearity range' means linearity over range of wavelengths? Plz clarify} in collecting multiple photons.  A SiPM consists of a
 large avalanche photodiode (APD) array built on a common silicon
@@ -563,7 +564,7 @@ Most of the low-temperature tests performed by LBNE teams on SiPMs in the last t
 done using LN2, as it has similar temperature (10~K below LAr) but
 costs much less.
 
-A number of SiPM manufacturers offer SiPMs, such as SenSL,
+A number of \fixme{remove the 1st SiPM simply manufacturers}SiPM manufacturers offer SiPMs, such as SenSL,
 Hamamatsu, KETEK, AdvanSiD, CPTA (Photonique), Philipis, Novel Device
 Laboratory (NDL), Zecotek, Voxtel, Amlification Technologies,
 Excelites, %etc, 
@@ -576,7 +577,7 @@ AdvanSID. It should be noted, however, that
 %although one should keep in mind, that in this rapidly developing field, manufacturers come up with 
 new, improved models appear every year from most manufacturers.
 
-%There are many SiPM suppliers on the market. 
+%There are many SiPM suppliers on the market. %\fixme{Carlos: this has been already said}
 The initial round of
 tests included models from SenSL (MicroSM-600-35-X13), Hamamtsu(MPPC
 S10985-100C), CPTA (SSPM-0710G9MM) and AdvanSID (ASD-SiPM3S-P).
@@ -669,7 +670,7 @@ picture of the actual circuit as built.
 \end{cdrfigure}
 
 As previously mentioned, tests focused on Hamamatsu and SenSL produced
-8 SiPMs. \fixme{tests produced a device? Plz clarify} However, the IU group found out that Hamamatsu
+8 SiPMs.%\fixme{Carlos: tests focused on devices from Hamamatsu and SenSl} \fixme{tests produced a device? Plz clarify} However, the IU group found out that Hamamatsu
 SiPMs are placed in a dewar inside a copper plated dark box and cooled
 with LN2. SiPMs are held in place on the PCB with acrylic holder as
 shown in the Fig~\ref{sipm_mount}. \fixme{This pgraph is confusing}
@@ -788,11 +789,11 @@ mounting. \fixme{devices of the 3 technologies are packaged together
 and the package is mounted on the apa? or the three all use the same
 mounting features? I'm confused}
 
-The reference design for mounting the PDs into the APA frames calls for
+The baseline \fixme{reference?} design for mounting the PDs into the APA frames calls for
 ten PD modules, approximately 2.2 m long, mounted with roughly equal
 spacing along the full length of the APA frame (Figure~\ref{fig:5.5-1}).  The
 PD modules are read out using individual twisted-pair cable, one per
-SiPM.  These cables (120 of them in the original reference design) are
+SiPM.  These cables (120 of them in the original baseline \fixme{reference?} design) are
 routed through the APA side tubes to a connector at the cold
 electronics readout end of the APA.  Initially it was decided that it
 would be too complicated to design the APA frames to allow PD module
@@ -848,7 +849,7 @@ in good contact with the SiPMs.
 
 Testing of the PD mount scheme in many test setups (at IU, CSU and
 FNAL), as well as experience APA assembly, have led to a re-evaluation
-of the PD mounting scheme.  The revised reference design has PD installation
+of the PD mounting scheme.  The revised baseline \fixme{} has PD installation
 %occurring following 
 after APA wire wrapping, through slots left in the side
 of the APA frame (Figure~\ref{fig:5.5-4}).  As shown in the figure, the
@@ -876,7 +877,7 @@ promise.  %This installation scheme
 
 
 Thermal contraction at cryogenic temperatures also complicates the
-mounting of the SiPMs in the PD modules.  The reference design sensL SiPMs are
+mounting of the SiPMs in the PD modules.  The baseline \fixme{} sensL SiPMs are
 surface-mount components, with four $0.5\times0.5$-mm pads for making
 electrical contact.  Unreliability \fixme{?} and elevated dark count rate
 problems, as well as physical delamination of the SiPM front face from
@@ -927,14 +928,14 @@ Table~\ref{tab:fee_req}.
 
 %
 The plans for the electronics for the photon detection subsystem
-include a reference design with several options that remain R\&D
+include a baseline \fixme{} design with several options that remain R\&D
 activities.  There alternative implementations of electronics are
 described in Section~\ref{sec_alt}.
 %These options are identified in the description that follows.  
 %There are also some alternative implementations of electronics that remain under consideration.  These are described in Section~\ref{sec_alt}
 %These are described in Section 6.4.
 
-In the reference design, there are no front-end electronics in the cold
+In the baseline \fixme{} plan, there are no front-end electronics in the cold
 volume.  Instead, the unamplified signals from the SiPMs are
 transmitted to outside the cryostat on cables for processing and
 digitization, as shown in Figure~\ref{fig:fig-e-1}.  There are
@@ -950,7 +951,7 @@ create mechanical challenges and installation difficulties; the flange
 board (warm/cold interface) is more complex; there are generally more
 connectors in the system; and signal-to-noise considerations are more
 difficult.  %Generally, t
-The reference design favors simplicity,
+The baseline  \fixme{} design favors simplicity,
 reliability and reduced R\&D time and costs, and also meets the
 performance requirements of the electronics.
 %
@@ -996,7 +997,7 @@ above, the following ideas are being pursued:
   for use with the cable described above are being pursued.
 \end{itemize}
 
-The reference design assumes that three SiPM signals \fixme{outputs?} can be ganged
+The baseline  \fixme{} plan assumes that three SiPM signals \fixme{outputs?} can be ganged
 together into one readout channel.  By using the multi-conductor cable
 with four twisted pairs, this results in one cable per PD consisting
 of 12 SiPMs.  The diameter of this cable is ~xxx-mm, \fixme{get number} which reduces the
@@ -1005,7 +1006,7 @@ detector.  The cost of the connectors also decreases by $\sim \times$10.
 Lastly, the ease in making connections at the flange board will be
 improved by the use of a mass-terminated connector.
 
-In the reference design, the front-end electronics reside outside of the
+In the baseline\fixme{}  plan, the front-end electronics reside outside of the
 cryostat in instrumentation racks.   A
 custom module for receiving SiPM signals has been designed and built, and signal
 processing is being performed in the front-end as preprocessing for trigger and DAQ.  The
@@ -1075,7 +1076,7 @@ this, the TPC and PD electronics must be synchronized, including
 timestamp counter resets, and a known and stable calibration between
 the corresponding timing resolution of the ADC conversion in the two
 systems \fixme{not full sentence}.  The electronics has been designed to support a full
-interface to the NO$\nu$A timing system, which is the reference design timing
+interface to the NO$\nu$A timing system, which is the baseline \fixme{} timing
 system for the experimental prototypes.
 
 A Xilinx Zynq FPGA, onboard %the 
@@ -1112,7 +1113,7 @@ ports on the top of the cryostat.
 
 %%%%%%%%%%% CE
 
-In the reference design of the PD electronics, %the approach was taken to have 
+In the baseline \fixme{} design of the PD electronics, %the approach was taken to have 
 no electronics are placed inside of the cold volume.  This results in a
 large number of cables and connectors.  Other experiments using liquid
 argon have successfully implemented cold TPC electronics, thereby
@@ -1227,7 +1228,7 @@ light into an estimate of a particle's interaction time, energy and a
 track/vertex location for each event.  
 
 As already described, the
-reference design for the scintillation photon detectors assumes employment of
+baseline \fixme{} for the scintillation photon detectors assumes employment of
 acrylic light collection paddles to reduce the required costly
 photo-cathode area. Several photon detector designs are presently
 being developed and are being tested in small dewars. Since %each 
@@ -1441,7 +1442,7 @@ cable down the frame side tube prior to wire-wrapping the APA.
 After experience with the environmental controls (primarily UV
 filtered light) required by the PDs, as well as the difficulties in
 dealing with the PD readout cable ends during wire-wrapping, it was
-decided to change the reference design  
+decided to change the baseline \fixme{} %to include inserting 
 such that the PDs would be inserted after
 wire wrapping is complete.  In addition to relaxing the physical constraints on
 the wire wrapping, this also relaxes a schedule connection between the
@@ -1456,7 +1457,7 @@ on an insertion station table.  Prior to installation, the PD cable
 bundle will be inserted into the APA side tubes.  The cable bundle
 will be pre-assembled prior to installation such that the end of each
 cable will terminate at the correct slot for the PD to be connected.
-Our reference cable design has also been modified to a single cable
+Our baseline \fixme{} cable design has also been modified to a single cable
 with four individual twisted pairs in a single jacket, so each APA side
 tube will only require 15 cables (three per PD, 30 per APA).  These cables
 extend approximately 30~cm past the end of the APA tubes at the cold
