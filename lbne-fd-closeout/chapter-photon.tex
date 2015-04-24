@@ -3,7 +3,10 @@
 \section{Introduction}
 
 \fixme{In our 2012 CDR we started each chapter with:  The scope of the (whichever) subsystem includes the design, procurement, fabrication, testing, delivery and installation of the mechanical and high voltage components of the (blah); followed by list of components -- see the TPC chapter. At this late date, not sure it's worth it...}
-\fixme{Carlos: I have difficulty finding most of the numbers representing the expected performance of the photon detection system. Therefore the majority of my fixme's are related to this central question: where can we find the benchmarking for the PD?}
+\fixme{Carlos: I have difficulty finding most of the numbers
+  representing the expected performance of the photon detection
+  system. Therefore the majority of my fixme's are related to this
+  central question: where can we find the benchmarking for the PD?} 
 
 
 Liquid argon is an excellent scintillating medium. With an average
@@ -25,17 +28,17 @@ be helpful in background rejection.
 \subsection{Beam-based physics}
 
 There are no requirements for the beam-based physics program, as the
-\fixme{Carlos: accelerator clock is better than machine clock}machine clock will provide a $t_{0}$ with roughly 10 $\mu$s
+accelerator clock will provide a $t_{0}$ with roughly 10 $\mu$s
 resolution. Given that the electron drift is 1.6 mm/$\mu$s the
-uncertainty to the electron lifetime correction is small is %\fixme{when?Carlos: yes, when} the beam
+uncertainty to the electron lifetime correction is small when the beam
 timing is used. The photon system can be useful in determining the
 $t_{0}$ of cosmic ray events and events from radiological decays as
 well as giving a handle to the location of beam events in the LAr
 volume with respect to fiducial boundaries. The impact of the LAr
 scintillation light on the detector performance needs to be
-determined,\fixme{Carlos:the negative at the beginning makes it sound strange, better move the not and rephrase it a bit: but it is expected that its role in reducing backgrounds
-for the oscillation program will not introduce additional requirements to
-the photon system design.}
+determined, but it is expected that its role in reducing backgrounds
+for the oscillation program will not introduce additional requirements
+to the photon system design.
 
 \subsection{Proton Decay and Atmospheric Physics}
 
@@ -43,11 +46,12 @@ The photon detector system must provide the t$_0$ for non-beam related
 physics channels if a correction for electron recombination during
 drift is to be applied. The requirements for electronics and hadronic
 energy resolution for the proton decay and the atmospheric neutrino
-program are\fixme{Carlos: I can not find where these numbers come from $1\% / \sqrt{E(GeV)} \bigoplus 1\%$ and $30\% /
-\sqrt{E(GeV)}$} respectively. With these resolutions the collected
-charge must be accurately corrected for recombination. Therefore the
-photon system must provide a $t_{0}$ for particles with >100 MeV with
->95\% efficiency in the fiducial volume of the detector.
+program are $1\% / \sqrt{E(GeV)} \bigoplus 1\%$ and $30\% /
+\sqrt{E(GeV)}$ respectively~\cite{bib:sci-opp-doc}. With these
+resolutions the collected charge must be accurately corrected for
+recombination. Therefore the photon system must provide a $t_{0}$ for
+particles with >100 MeV with >95\% efficiency in the fiducial volume
+of the detector.
 
 \subsection{Low-energy Physics}
 
@@ -57,27 +61,24 @@ electrons to be 20\% using only TPC information and assuming a highly
 efficient trigger and an electron lifetime of 5 ms. The impact of
 various detector resolutions on the physics potential of LBNE has not
 been studied in detail. At present there is no strong requirement that
-the energy resolution %\fixme{Carlos: yes, we need must} %\must 
-be better than 20\%, so no requirement on
+the energy resolution must be better than 20\%, so no requirement on
 the photon system trigger efficiency is set at this time. However it
-is clear that if a detector design can be found, \fixme{clarify `detector design can be found'} \fixme{Carlos': I propose that we write: if a better detector design, with higher photon collection efficiency, can be found then the energy resolution could be significantly improved}
-would greatly improve. A goal of the photon detection R\&D is to
+is clear that if a better detector design, with higher photon
+collection efficiency, can be found then the energy resolution could
+be significantly improved. A goal of the photon detection R\&D is to
 develop a system with the lowest possible threshold for a reasonable
-cost. At the %time of the %\fixme{Carlos: ok}
-start of %\the final%\definitive design, a final decision as to the
-configuration will need to be made based on cost and added physics
-capability.
+cost.
 
 \subsection{Required Performance}
 
 To achieve the physics goals in the previous section the performance
 of the photon detection system must be understood. The prototype
 readout electronics described in Section~\ref{sec_elec} have been
-shown to detect the single photoelectron (p.e.) signals associated with the late
-scintillation light but future versions may sacrifice this ability to
-mitigate high channel costs %\fixme{Carlos: we should say how we intend to mitigate high channel costs}. It is assumed that the physics goals of
-the photon detection system will be met using the prompt
-scintillation light.
+shown to detect the single photoelectron (p.e.) signals associated
+with the late scintillation light but future versions may sacrifice
+this ability to mitigate high channel costs. It is assumed that the
+physics goals of the photon detection system will be met using the
+prompt scintillation light.
 
 The performance, or overall photon collection efficiency, is given by
 the following, where it is assumed only prompt light is collected:
@@ -108,17 +109,24 @@ in table~\ref{Table-Eff}.
       &  & & travel into waveguide  \\ \colhline
       $\epsilon_{tran}$ & waveguide transmission & TBD  & prototype
       dependent  \\ \colhline
-     $\epsilon_{QE}$ & SiPM QE & .31  & SensL b-series  \\
+     $\epsilon_{QE}$ & SiPM QE & .41  & SensL C-series  \\
 \end{cdrtable}
 
 
-Using Equation~\ref{eff_eqn} it is seen that to detect a
-2~p.e. signal, likely to be discriminated from noise, the transport
-efficiency is 1.2\%. Of course this value is very position-dependent,
+Using Equation~\ref{eff_eqn}, and only looking at the prompt photons
+for a 20~MeV electron, it is seen that to detect a 2~p.e. signal,
+which is likely to be discriminated from noise, the required transport
+efficiency is 3.6\%. Of course this value is very position-dependent,
 as the geometric acceptance, wire shadowing and transport corrections
-all depend on the location of the event. Figure~\ref{fig:photon_map}
-shows the probability of (?)\fixme{} MeV energy deposition being detected in
-the photon detectors. 
+all depend on the location of the event. It is also expected that
+there will be a thousand or so events in 10 kt during the SN burst
+neutrino arrival and hence detection efficiency may be higher due to
+the increase in number of photons - although for triggering the
+leading edge of neutrino arrivals is most important. 
+
+Figure~\ref{fig:photon_map}
+shows the probability of (?)\fixme{} MeV energy deposition being
+detected in the photon detectors.
 
 \begin{cdrfigure}[Probability of photon being detected in
   detectors when depositing energy]{photon_map}{Photon map giving the probability of photon being 
