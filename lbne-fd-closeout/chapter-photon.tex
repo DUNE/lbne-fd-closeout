@@ -793,107 +793,93 @@ vendor.
 
 \section{Mechanical Support}
 \ref{MECH_SECTION}
-Mechanically supporting the PD systems in the APA frames
-presents several challenges, including the need to support three
-different light-collecting and wavelength-shifting technologies in a
-package utilizing the same mounting features in the APA frames, and
-the effects of varying thermal contraction of various materials at 80
-degrees Kelvin which complicated both light collector and SiPM
-mounting. \fixme{devices of the 3 technologies are packaged together 
-and the package is mounted on the apa? or the three all use the same
-mounting features? I'm confused}
 
-The baseline \fixme{reference?} design for mounting the PDs into the APA frames calls for
-ten PD modules, approximately 2.2 m long, mounted with roughly equal
-spacing along the full length of the APA frame (Figure~\ref{fig:5.5-1}).  The
-PD modules are read out using individual twisted-pair cable, one per
-SiPM.  These cables (120 of them in the original baseline \fixme{reference?} design) are
-routed through the APA side tubes to a connector at the cold
-electronics readout end of the APA.  Initially it was decided that it
-would be too complicated to design the APA frames to allow PD module
-installation following APA wire-wrapping, so it was planned to install 
-the PD modules %were installed 
-prior to this step.% in the installation process.  
-The
-wavelength-shifting elements in the light collectors of the PD modules
-are sensitive to heat, humidity and most critically to %exposure to
-ambient light, which places significant requirements \fixme{constraints?} on the
-environment in which the APAs are assembled and stored,% in this way, 
-%but initially it was decided this was the best option.
-\fixme{Something about how this is still better than installing them after wire-wrapping; list a risk or two of that method, maybe, for comparison}
+Mechanically supporting the PD systems in the APA frames presents
+several challenges, including the need to be able to support three
+different light-collecting and wavelength-shifting technologies
+(individually) in a package utilizing the same mounting features in
+the APA frames, and the effects of varying thermal contraction of
+various materials at 80 degrees Kelvin which complicated both light
+collector and SiPM mounting.
+
+The reference design for mounting the PDs into the APA frames calls
+for ten PD modules, approximately 2.2 m long, mounted with roughly
+equal spacing along the full length of the APA frame
+(Figure~\ref{fig:5.5-1}).  The PD modules are read out using
+individual twisted-pair cable, one per SiPM.  These cables (120 of
+them in the original reference design) are routed through the APA side
+tubes to a connector at the cold electronics readout end of the APA.
+Initially it was decided that it would be too complicated to design
+the APA frames to allow PD module installation following APA
+wire-wrapping, so it was planned to install the PD modules prior to
+this step.  The wavelength-shifting elements in the light collectors
+of the PD modules are sensitive to heat, humidity and most critically
+to exposure to ambient light, which places significant requirements on
+the environment in which the APAs are assembled and stored.
 
 \begin{cdrfigure}[Full APA frame with ten photon detectors mounted
   inside the frame]{5.5-1}{Full APA frame with ten photon detectors mounted
-  inside the frame}
+  inside the frame.}
    \includegraphics[width=.6\columnwidth]{fig5-5-1.png}
 \end{cdrfigure}
 
 A universal PD frame assembly was devised to hold all three PD design
-variations under consideration.  Figure~\ref{fig:5.5-2} shows an example of a
-short (400-mm-long active area) version of this frame manufactured for
-the 35t test, \fixme{figure could use labeling} and Figure~\ref{fig:5.5-3} shows a mechanical assembly drawing of
-the frame system for one of the candidate light collector choices.
-The frame consists of two plastic (acetal) end caps mounted to the
-inside of the APA frame, joined by 10-mm-diameter stainless steel tubes
-that run the full width of the APA frame, providing intermediate
-support for the PD modules.% as needed.  
-The SiPM mount PCBs \fixme{I can't parse this phrase} are
-incorporated into one of the end blocks, along with the cable
-connections for the twisted-pair cables.  Due to the significant
-%variations in 
-difference between the coefficients of thermal expansion for the stainless
-steel frame and the plastic WLS elements, %we expect 
-a relative
-difference in thermal contraction of $\sim$1\% is expected at LAr temperatures.  The
-far endblock assembly provides balancing forces to the light collector
-elements %as required 
-to ensure these elements remain %in 
-straight and
-in good contact with the SiPMs.
+variations under consideration.  Figure~\ref{fig:5.5-2} shows an
+example of a short (400-mm-long active area) version of this frame
+manufactured for the 35t test, and Figure~\ref{fig:5.5-3} shows a
+mechanical assembly drawing of the frame system for one of the
+candidate light collector choices.  The frame consists of two plastic
+(acetal) end caps mounted to the inside of the APA frame, joined by
+10-mm-diameter stainless steel tubes that run the full width of the
+APA frame, providing intermediate support for the PD modules.  The
+PCBs in which the SiPMs are mounted mount PCBs are incorporated into
+one of the end blocks, along with the cable connections for the
+twisted-pair cables.  Due to the significant differences between the
+coefficients of thermal expansion for the stainless steel frame and
+the plastic WLS elements, a relative difference in thermal contraction
+of $\sim$1\% is expected at LAr temperatures.  The far endblock
+assembly provides the balancing forces to the light collector elements
+required to ensure these elements remain in good contact with the
+SiPMs.
 
 \begin{cdrfigure}[Photograph of 40~cm long bar-based prototype mounted in test frame]{5.5-2}{Photograph of 40~cm long bar-based prototype mounted in test frame}
   \includegraphics[width=.5\textwidth]{fig5-5-2.png}
 \end{cdrfigure}
 
-
 \begin{cdrfigure}[Mechanical assembly drawing of frame system]{5.5-3}{Mechanical assembly drawing of frame system}
   \includegraphics[width=\columnwidth]{fig5-5-3.png}
 \end{cdrfigure}
 
-
 Testing of the PD mount scheme in many test setups (at IU, CSU and
 FNAL), as well as experience APA assembly, have led to a re-evaluation
-of the PD mounting scheme.  The revised baseline \fixme{} has PD installation
-%occurring following 
-after APA wire wrapping, through slots left in the side
-of the APA frame (Figure~\ref{fig:5.5-4}).  As shown in the figure, the
-plan still calls for ten PDs per APA frame.  Five of the PDs will be
-installed through each side of the APA frame, and the cables for each
-of the PDs will be routed to the cold-electronics end of the APA,
-inside the side tube through which the PD was inserted.  Stainless steel
-c-channels mounted into the APA frames prior to wire wrapping will
-guide and support the PDs during and after installation.  The PD will
-only be attached to the APA frame at one end, so the purely plastic PD
-module will be free to slide in the track to allow for the
-differential contraction (Figure~\ref{fig:5.5-5}).  Tests of the 2.2-m prototype
-assemblies of both fiber hybrid and the LSU-proposed monolithic
-acrylic bar design in the CSU CDDF \fixme{what's cddf?} have demonstrated significant
-promise.  %This installation scheme
+of the PD mounting scheme.  The revised reference design has PD
+installation occurring after APA wire wrapping, through slots left in
+the side of the APA frame (Figure~\ref{fig:5.5-4}).  As shown in the
+figure, the plan still calls for ten PDs per APA frame.  Five of the
+PDs will be installed through each side of the APA frame, and the
+cables for each of the PDs will be routed to the cold-electronics end
+of the APA, inside the side tube through which the PD was inserted.
+Stainless steel c-channels mounted into the APA frames prior to wire
+wrapping will guide and support the PDs during and after installation.
+The PD will only be attached to the APA frame at one end, so the
+purely plastic PD module will be free to slide in the track to allow
+for the differential contraction (Figure~\ref{fig:5.5-5}).  Tests of
+the 2.2-m prototype assemblies of both fiber hybrid and the
+LSU-proposed monolithic acrylic bar design in the CSU CDDF have
+demonstrated significant promise.
 
 \begin{cdrfigure}[Blow up of APA fram showing PD insertion location]{5.5-4}{Blow up of APA fram showing PD insertion location}
   \includegraphics[width=.6\columnwidth]{fig5-5-4.png}
 \end{cdrfigure}
 
-
 \begin{cdrfigure}[Slot and rail showing mounting location of photon detector]{5.5-5}{Slot and rail showing mounting location of photon detector}
   \includegraphics[width=.6\columnwidth]{fig5-5-5.png}
 \end{cdrfigure}
 
-
 Thermal contraction at cryogenic temperatures also complicates the
-mounting of the SiPMs in the PD modules.  The baseline \fixme{} sensL SiPMs are
+mounting of the SiPMs in the PD modules.  The baseline SensL SiPMs are
 surface-mount components, with four $0.5\times0.5$-mm pads for making
-electrical contact.  Unreliability \fixme{?} and elevated dark count rate
+electrical contact.  Reliability issues and elevated dark count rate
 problems, as well as physical delamination of the SiPM front face from
 the silicone substrate, were observed early in cryogenic testing of
 SiPMs, and suspicion fell on the mechanical contact between the
