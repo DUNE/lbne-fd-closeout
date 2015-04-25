@@ -544,25 +544,21 @@ the overall far detector project schedule can be met.
 
 \section{Silicon Photomultipliers}
 
-Silicon Photomultipliers (SiPMs) have been selected as the reference design photon
-detectors for the far detector LArTPC.% photon detection system. 
-\fixme{Do we say `a sipm' or `sipm technology'? Plain `sipm' sounds funny.} \fixme{Carlos:yes,  it is standard terminology, right?} A SiPM is
-a photo detection device sensitive to single photons with excellent
-linearity range \fixme{`linearity range' means linearity over range of wavelengths? Plz clarify} in collecting multiple photons.  A SiPM consists of a
-large avalanche photodiode (APD) array built on a common silicon
-substrate. APDs operate in Geiger mode. \fixme{operates like a geiger counter?  I'd say, either give a more complete description of how they work or leave this off. Feels like it's out of the blue. Just MHO. AH} 
+Silicon Photomultipliers (SiPMs) have been selected as the reference
+design photon detectors for the far detector photon detection
+system. An SiPM is a photo detection device sensitive to single
+photons with excellent linear response in collecting multiple photons.
 
-SiPMs have been developing at a very fast pace in recent years, in
-response to the needs of the medical industry. As a result, the price of
-SiPMs has gone down, while their performance has greatly
-improved. A number of characteristics make SiPMs an
+SiPMs have been developing at a very fast pace in recent years,
+largely in response to the needs of the medical industry. As a result,
+the price of SiPMs has reduced considerably, while their performance
+has greatly improved. A number of characteristics make SiPMs an
 attractive choice as photon detectors for the PD system:
 
 \begin{itemize}
 
 \item{High photon-detection efficiency (PDE), up to 40-50\% at the
   peak detection wavelength. }
-
 \item{High intrinsic gain ranging from 105 to 107 depending on the
   overvoltage}
 \item{Low dark rate at cryogenic temperatures --- less than 50 Hz even
@@ -580,43 +576,35 @@ attractive choice as photon detectors for the PD system:
 \end{itemize}
 
 In short, SiPMs have demonstrated performance comparable to
-traditional PMTs, but at a significantly reduced cost and %. As a result, they have become a 
-are the photon-detector of choice for PD system of the far
-LArTPC detector.
+traditional PMTs, but at a significantly reduced cost. As a result,
+they have become the photon-detector of choice for PD system of
+the far detector.
 
-The main risk associated with using SiPMs is  %generally they have
-%not been designed for 
-operation at LAr temperature. %None of the 
-SiPM
-data sheets neither show nor guarantee the device's performance at cryogenic
-temperatures. %This was the main motive for testing SiPMs at LAr temperatures. 
-Most of the low-temperature tests performed by LBNE teams on SiPMs in the last two years have been
-done using LN2, as it has similar temperature (10~K below LAr) but
-costs much less.
+The main risk associated with using SiPMs is that they have not
+generally been designed for operation at LAr temperature. None of the
+SiPM data sheets show nor guarantee the device's performance
+at cryogenic temperatures. This was the main motive for testing SiPMs
+at LAr temperatures.  Most of the low-temperature tests performed by
+LBNE teams on SiPMs in the last two years have been done using LN2, as
+it has similar temperature (10~K below LAr) but costs much less.
 
-A number of \fixme{remove the 1st SiPM simply manufacturers}SiPM manufacturers offer SiPMs, such as SenSL,
-Hamamatsu, KETEK, AdvanSiD, CPTA (Photonique), Philipis, Novel Device
-Laboratory (NDL), Zecotek, Voxtel, Amlification Technologies,
-Excelites, %etc, 
-but only a fraction of them offer SiPMs 
-suitable for the PD system --- large area ($6\times6 mm^2$ or $3\times3 mm^2$), large fill
-factor, pin or surface mount and no housing. An
-exhaustive search of suitable SiPMs was conducted in 2012 and
-sample SiPMs were obtained from SenSL, Hamamtsu, CPTA and
-AdvanSID. It should be noted, however, that 
-%although one should keep in mind, that in this rapidly developing field, manufacturers come up with 
-new, improved models appear every year from most manufacturers.
+A number of manufacturers offer SiPMs, such as SenSL, Hamamatsu,
+KETEK, AdvanSiD, CPTA (Photonique), Philipis, Novel Device Laboratory
+(NDL), Zecotek, Voxtel, Amlification Technologies, Excelites, etc...,
+but only a fraction of them offer SiPMs suitable for the PD system --
+large area ($6\times6 mm^2$ or $3\times3 mm^2$), large fill factor,
+pin or surface mount and no housing. An exhaustive search of suitable
+SiPMs was conducted in 2012 and sample SiPMs were obtained from SenSL,
+Hamamtsu, CPTA and AdvanSID. It should be noted, however, that
+although one should keep in mind, that in this rapidly developing
+field, manufacturers come up with new models regularly.
 
-%There are many SiPM suppliers on the market. \fixme{Carlos: this has been already said}
-The initial round of
-tests included models from SenSL (MicroSM-600-35-X13), Hamamtsu(MPPC
-S10985-100C), CPTA (SSPM-0710G9MM) and AdvanSID (ASD-SiPM3S-P).
-%, as we
-%had success in obtaining suitable models from these four companies. 
-In
-this test, SiPMs were cooled in liquid nitrogen, laser light pulses at 400~nm
-wavelength were used as the light source and signal output as a
-function of overvoltage was recorded. Results can be seen in Figure~\ref{laser400}.
+Preliminary tests included models from SenSL (MicroSM-600-35-X13),
+Hamamtsu(MPPC S10985-100C), CPTA (SSPM-0710G9MM) and AdvanSID
+(ASD-SiPM3S-P).  In these tests, SiPMs were cooled in liquid nitrogen
+and laser light pulses at 400~nm wavelength were used as the light
+source. Signal output as a function of overvoltage was recorded. Results
+can be seen in Figure~\ref{laser400}.
 
 \begin{cdrfigure}[SiPM signals as function of bias voltage in liquid
     nitrogen.]{laser400}{SiPM signals as function of bias voltage in
@@ -628,40 +616,35 @@ function of overvoltage was recorded. Results can be seen in Figure~\ref{laser40
   \includegraphics[width=.8\columnwidth]{sipm_laser.png}
 \end{cdrfigure}
 
-Based on these initial tests and high price
-quotes received at the time from AdvanSiD and CPTA, the follow-up tests focused on SenSL and
-Hamamatsu models. \fixme{but not the models already tested? Clarify (per the below)} % This decision was partially driven by .
+Based on these preliminary tests and high price quotes received at the
+time from AdvanSiD and CPTA, the follow-up tests focused only on SenSL and
+Hamamatsu models. 
 
-Shortly after initial tests, SenSL came up with a new model
-(MicroFB-600-35-SMT followed by improved MicroFC-600-35-SMT) and most
-of the tests \fixme{so the `follow-up' tests were done on these new models?} have been done on the SenSL models. Hamamtsu’s MPPC
-S12895- 0404-PB50 has been on the market for a long time and Indiana
-group measured very high cross-talk and afterpulsing rates. \fixme{Do we need prev sentence?} Hamamtsu
-%came up with 
-released a new, improved model in 2015, S13360, that will be
-tested in 2015 and compared with SenSL models.
+Following initial tests, SenSL released a new model of the device we
+had been testing (MicroFB-600-35-SMT followed by improved
+MicroFC-600-35-SMT) and follow-up tests were performed on these new
+models. Hamamtsu’s MPPC S12895- 0404-PB50 has been on the market for a
+long time and the Indiana group has measured very high cross-talk and
+afterpulsing rates. Hamamtsu has released a new, improved model in
+2015, S13360, that will be tested in 2015 and compared with SenSL
+models.
 
-\fixme{Can we summarize the current status? Which model is in the lead?}
+The C-Series SensL device has the same low after-pulsing and gain
+characteristics as the earlier SensL device being tested while having
+a larger detection efficiency (41\% vs. 31\%) and lower dark noise.  
 
 \subsection{Requirements}
 
-Despite argon's excellent scintillation yield, the PD system requires high-sensitivity photon detectors % to detect the scintillation light 
-due to
-the very small surface area of the SiPMs. %PDs.  
-Furthermore, the late scintillation light in
-argon reprsents 2/3 of the total, %scintillation light, 
-but it is spread
-over 1100 -- 1600~ns, making the individual late-light signals very
-small on average.
-
-%SiPM characteristics from the data sheets satisfy these requirements
-%in general \fixme{be more specific than `in general'. I'm left feeling like
-%you're not telling me something.}. Thus, 
+Despite liquid argon's excellent scintillation yield, the PD system
+requires high-efficiency photon detection due to the very small
+surface area of the SiPMs.  Furthermore, the late scintillation light
+in argon reprsents 3/4 of the total, but it is spread over 1100 --
+1600~ns, making the individual late-light signals very small on
+average.
 
 SiPM data sheets indicate that these requirements are satisfied, but
-it is important to observe similar performance
-%is observed 
-at LAr temperatures in terms of high gain, sensitivity to
+it is important to determine that performance required by the PD
+system is observed at LAr temperatures in terms of high gain, sensitivity to
 single photoelectrons, high PDE, linearity of response, stability
 of breakdown voltage, long-term stability, low afterpulsing and low
 cross-talk. In addition, SiPMs must exhibit mechanical
