@@ -2,25 +2,20 @@
 \label{ch:photon}
 \section{Introduction}
 
-\fixme{In our 2012 CDR we started each chapter with:  The scope of the
-  (whichever) subsystem includes the design, procurement, fabrication,
-  testing, delivery and installation of the mechanical and high
-  voltage components of the (blah); followed by list of components --
-  see the TPC chapter. At this late date, not sure it's worth it...} 
-
 Liquid argon is an excellent scintillating medium. With an average
 energy needed to produce a photon of 19.5~eV (at zero field) a typical
 particle depositing 1~MeV in liquid argon will generate 40,000~photons
 with a wavelength of 128~nm. At higher fields this will be reduced but
 at 500~V/cm the yield is still about $\sim$20,000~photons per
 MeV. Roughly 1/4 of the photons are promptly emitted after about 6~ns
-while the rest are are emitted with a delay of 1100-1600~ns. LAr
-is highly transparent to the 128~VUV photons with a Rayleigh
-scattering length and absorption length of \fixme{Carlos:the latest result is 55 cm}95~cm and >200~cm
-respectively~\cite{bib:gracearxiv}. The relatively large light yield makes the scintillation
-process an excellent candidate for determination of $t_{0}$ for
-non-beam related events. Detection of the scintillation light may also
-be helpful in background rejection.
+while the rest are are emitted with a delay of 1100-1600~ns. LAr is
+highly transparent to the 128~VUV photons with a Rayleigh scattering
+length and absorption length of \footnote{A new result determines the
+  Rayleigh scattering length to be 55~cm~\cite{RAYLEIGH_NEW}} 95~cm
+and >200~cm respectively~\cite{bib:gracearxiv}. The relatively large
+light yield makes the scintillation process an excellent candidate for
+determination of $t_{0}$ for non-beam related events. Detection of the
+scintillation light may also be helpful in background rejection.
 
 \section{Requirements and Goals}
 
@@ -92,7 +87,6 @@ The efficiencies leading to the overall number of photo-electrons
 collected by the photon detection system, $\frac{N_{pe}}{MeV}$, are given
 in table~\ref{Table-Eff}.
 
-
 \begin{cdrtable}[Individual photon collection efficiencies]{clcl}{example}
 {Individual photon collection efficiencies}
  Factor & Description & Value & Comments \\ \toprowrule
@@ -111,7 +105,6 @@ in table~\ref{Table-Eff}.
      $\epsilon_{QE}$ & SiPM QE & .41  & SensL C-series  \\
 \end{cdrtable}
 
-
 Using Equation~\ref{eff_eqn}, and only looking at the prompt photons
 for a 20~MeV electron, it is seen that to detect a 2~p.e. signal,
 which is likely to be discriminated from noise, the required transport
@@ -123,17 +116,22 @@ neutrino arrival and hence detection efficiency may be higher due to
 the increase in number of photons - although for triggering the
 leading edge of neutrino arrivals is most important. 
 
+An additional possibility is to utilize the delayed photons to
+increase the number of collected photons and effectively reduce the
+detection energy. As the delayed photons are typically detected as
+single photo-electrons due to the spread over time it is important to
+understand the contrinution of backgrounds coming from SiPM dark rate
+and $^{39}$Ar during the integration window.   
+
 Figure~\ref{fig:photon_map}
-shows the probability of (?)\fixme{} MeV energy deposition being
+shows the probability of energy deposition from MIPs being
 detected in the photon detectors.
 
 \begin{cdrfigure}[Probability of photon being detected in
   detectors when depositing energy]{photon_map}{Photon map giving the probability of photon being 
-  detected in the photon detectors when depositing energy at map location. \fixme{(need
-  general TPC cell map with better description)}}
+  detected in the photon detectors when depositing energy at map location.}
   \includegraphics[width=0.4\textwidth]{35t_map.jpg}
 \end{cdrfigure}
-
 
 The TPC wire mesh shadowing is also quite location-dependent as photon
 angles, relative to the wire plane, lead to rapid loss in transmission
@@ -149,8 +147,8 @@ acceptance correction.
 In the event that higher photon collection efficiencies can be
 achieved it should be possible to improve the energy resolution of the
 detector by adding the photon yield to the electron yield information.
-However this requires several orders of \fixme{Carlos: magnitude} improvement in light
-collection efficiency, so it is beyond the scope of the present design.
+However this requires significant improvement in light collection
+efficiency, so it is beyond the scope of the present design. 
 
 \section{Photon Detector Prototype Designs}
 
@@ -158,8 +156,10 @@ All designs considered for the photon detector have been based on the
 use of wavelength-shifting coating, or bulk doping, of plastic
 materials coupled to silicon photomultipliers (SiPMs). The reference
 design utilizes a coated acrylic waveguide coupled to
-SiPMs. This waveguide is described in Section~\ref{sec_bars}. Alternate waveguide designs, desribed in the following sections, have
-been developed in an effort to optimize coverage, cost and attenuation length. 
+SiPMs. This waveguide is described in
+Section~\ref{sec_bars}. Alternate waveguide designs, desribed in the
+following sections, have been developed in an effort to optimize
+coverage, cost and attenuation length.  
 
 \subsection{Cast or Bulk Doped Acrylic Bars}
 \label{sec_bars}
@@ -167,9 +167,9 @@ been developed in an effort to optimize coverage, cost and attenuation length.
 The reference design for the photon detection system is based on light
 guides that are coated with wavelength shifter. The 128-nm
 scintillation photons from liquid argon interact with the wavelength
-shifter on the light guide surface and \fixme{Carlos: peaking at 430-nm light is re-emitted} in
-the bar.  The light guide channels the light to photodetectors at its
-end.
+shifter on the light guide surface and light peaking at 430-nm is
+re-emitted in the bar.  The light guide channels the light to
+photodetectors at its end.
 
 A schematic drawing of a light guide with its photosensors is shown in
 Figure~\ref{fig:WaveguideSketch}. The prototype light guides are bars
@@ -184,8 +184,8 @@ Ref.~\cite{bib:MITbars}.
     \includegraphics[width=.85\columnwidth]{cast-acryl-lightguide}
 \end{cdrfigure}
 
-The wavelength shifter converts incident VUV scintillation photons %striking it
-to 430~nm photons inside the bar, with an efficiency of $\sim$50\% %of
+The wavelength shifter converts incident VUV scintillation photons
+that strike it into 430~nm photons inside the bar, with an efficiency of $\sim$50\% %of
 for converting a VUV to an optical photon~\cite{bib:gehman}.  A fraction
 of the waveshifted optical photons are internally reflected to the
 bar's end where they are detected by SiPMs whose QE is well matched to
@@ -209,7 +209,6 @@ Table~\ref{tab:lightGuides}.
       (b) & doped Eljen PVT light guide, dip-coated   \\ \colhline
       (c) & doped Eljen polystyrene light guide, dip-coated    \\ 
 \end{cdrtable}
-
 
 
 The clear acrylic bars (a) are made from blanks of commercially
@@ -243,7 +242,7 @@ To embed the WLS at the surface of the light guides, a ``dip-coating''
 process was developed at Indiana University.  Before the WLS was
 applied to the acrylic bars, the bars were annealed at 80$^\circ$C for one
 hour.  (The Eljen bars were not annealed.)  The WLS was dissolved in the
-organic solvent\fixme{Carlos: dichlormethane (DCM)} (CH$_2$Cl$_2$).  For these waveguides
+organic solvent, dichlormethane (CH$_2$Cl$_2$).  For these waveguides
 5~g of wavelength shifter was dissolved in 1,000~gm of DCM.  A
 series of experiments showed that this concentration was optimum.  A
 bar was first dipped into the WLS mixture for 15 seconds and then
@@ -262,16 +261,15 @@ scaled to 1.5~m.
 
 \subsection{Fiber-embedded Bulk Acrylic Plate}
 
-%At LSU, Thomas Kutter and his team have 
-The LSU team has developed a VUV photon detector
-design for a large LAr detector that overcomes some of the
-shortcomings of the present LBNE baseline \fixme{define `baseline' here; do you mean `reference design'?}%\fixme{Carlos: yes} photon detectors. The LSU
-photon detector design allows for coverage of a very large area, thereby
-increasing the geometrical acceptance of the photon detectors. The
-number of required SiPMs and readout channels per unit detector area
-covered with photon detection panels has been significantly reduced to
-keep the overall cost for the photon detection system at or below the
-present design while increasing the geometrical acceptance. % at the same time.
+The LSU group has developed a VUV photon detector design for a large
+LAr detector that overcomes some of the shortcomings of the present
+LBNE reference design photon detectors. The LSU photon detector design
+allows for coverage of a very large area, thereby increasing the
+geometrical acceptance of the photon detectors. The number of required
+SiPMs and readout channels per unit detector area covered with photon
+detection panels has been significantly reduced to keep the overall
+cost for the photon detection system at or below the present design
+while increasing the geometrical acceptance at the same time.
 
 The photon detection system consists of a TPB-coated acrylic panel
 with an embedded S-shaped wavelength shifting (WLS) fiber. The fiber
@@ -285,8 +283,7 @@ photograph of a prototype photon detection panel in the test stand at
 LSU.  The incoming 128-nm VUV Ar scintillation light will be converted
 by the thin TPB layer on the acrylic panel and re-emitted with
 wavelength peaking at 430~nm in an isotropic way. About 50\% of the
-light %would be 
-is emitted into the acrylic panel where some fraction will
+light is emitted into the acrylic panel where some fraction will
 be absorbed by the WLS fiber and converted to light with a peak
 intensity of about 480 -- 500~nm. The green light exiting the fiber is
 well matched to the peak photon detection efficiency of typical SiPMs.
@@ -296,40 +293,38 @@ well matched to the peak photon detection efficiency of typical SiPMs.
 \includegraphics[width=0.45\linewidth]{LSU_panel_prototype.png}
 \end{cdrfigure}
 
-\fixme{Carlos: there is an asymmetry in the sections describing each of the designs: some of the subsections, like the ones describing the LSU and the CSU designs, go into details of the tests that were performed while the IU design receives no such treatment. I think this should be standardized for all designs}  
-
 \subsection{LSU Photon detection panel production}
 
-The photon detection panels are produced from 0.25-inch-thick
-sheet UVT acrylic and cut to size. For a first series of prototypes
-the acrylic panel dimensions were chosen to closely match the area of
-four bars of the LBNE baseline \fixme{reference?} photon detection system.  The groove is
-cut with a CNC mill in several passes to achieve good groove surface
-quality, which is important for good light transmission from the bulk
-acrylic to the fiber. The panels are dip coated with TPB and left to
-dry prior to insertion of the WLS fiber. Panels with two and three
-layers of fibers inserted and glued into the groove have been
-produced. Fiber ends are cut and polished.  The resulting acrylic
-panels are then inserted into a custom-made mechanical frame.% which was designed by David Warner at CSU. 
-The end caps of the mechanical frame
-house one SiPM on either end. The presently used $6\times6 mm^2$ active-area
-SiPMs are spring-mounted to ensure good contact between the active area
-and the fiber ends.  The leads of the SiPMs are connected to a small
-Printed Circuit Board (PCB) %\fixme{define} %\fixme{Carlos: done} onto which $\sim$2-m-long twisted-pair coax cables are soldered to
-supply the SiPM with a bias voltage and to read out signals. The other
-cable ends are typically connected to pre-amplifiers before leading to
-a DAQ system.  Components for the photon detection panels are
-inspected at all stages of the manufacturing process for quality. Due
-to the small number of panels produced to date, no quantitative quality
-control parameters have been defined yet.  Proper connectivity of the
-fully assembled units are tested in a setup at LSU using a LED
-flasher. If LED light signals are seen, the panel is successively
-immersed in gaseous argon (GAr) along with an alpha source. The
-observation of %argon 
-scintillation light originating from alpha
-particles and cosmic rays penetrating the GAr volume allows for a
-relatively quick quality-control check of a completed photon detector
-at room temperature.
+The photon detection panels are produced from 0.25-inch-thick sheet
+UVT acrylic and cut to size. For a first series of prototypes the
+acrylic panel dimensions were chosen to closely match the area of four
+bars of the LBNE baseline \fixme{reference?} photon detection system.
+The groove is cut with a CNC mill in several passes to achieve good
+groove surface quality, which is important for good light transmission
+from the bulk acrylic to the fiber. The panels are dip coated with TPB
+and left to dry prior to insertion of the WLS fiber. Panels with two
+and three layers of fibers inserted and glued into the groove have
+been produced. Fiber ends are cut and polished.  The resulting acrylic
+panels are then inserted into a custom-made mechanical frame, which
+was designed by David Warner at CSU.  The end caps of the mechanical
+frame house one SiPM on either end. The presently used $6\times6 mm^2$
+active-area SiPMs are spring-mounted to ensure good contact between
+the active area and the fiber ends.  The leads of the SiPMs are
+connected to a small Printed Circuit Board (PCB) onto which
+$\sim$2-m-long twisted-pair coax cables are soldered to supply the
+SiPM with a bias voltage and to read out signals. The other cable ends
+are typically connected to pre-amplifiers before leading to a DAQ
+system.  Components for the photon detection panels are inspected at
+all stages of the manufacturing process for quality. Due to the small
+number of panels produced to date, no quantitative quality control
+parameters have been defined yet.  Proper connectivity of the fully
+assembled units are tested in a setup at LSU using a LED flasher. If
+LED light signals are seen, the panel is successively immersed in
+gaseous argon (GAr) along with an alpha source. The observation of
+argon scintillation light originating from alpha particles and cosmic
+rays penetrating the GAr volume allows for a relatively quick
+quality-control check of a completed photon detector at room
+temperature.
 
 \subsection{Proof-of-Concept and Prototype Detector Results}
 
