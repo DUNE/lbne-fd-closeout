@@ -903,14 +903,13 @@ Testing and development are still underway to resolve this issue.
 
 \subsection{Reference Design} %Added by AH to avoid single subsec for Alternatives'
 
-Scintillation light from LAr comes from the two different excited
-states \fixme{of Ar atoms?} with lifetimes of about 6~ns and 1.6~$\mu$s.  Only a limited
-amount of light \fixme{can you be a bit more specific?} is collected by the PD system, so the electronics must
-be designed to collect the light from both excited states. A summary
-of the general requirements for the system, including requirements
-from a physics performance perspective, are given in
-Table~\ref{tab:fee_req}.
-%
+Due to the geometric acceptance of the system, only a fraction amount
+of scintillation light is collected by the PD system, so the
+electronics must be designed to collect the light from both excited
+states. A summary of the general requirements for the system,
+including requirements from a physics performance perspective, are
+given in Table~\ref{tab:fee_req}.
+
 \begin{cdrtable}[Physics requirements for the photon detector electronics]{ll}{fee_req}
 {Physics requirements for the photon detector electronics}
  Performance Parameter       & Target   \\ \toprowrule
@@ -925,43 +924,34 @@ Table~\ref{tab:fee_req}.
  Timing                                 & Events time-stamped using NO$\nu$A Timing syst.  \\
 \end{cdrtable}
 
-
 %
 The plans for the electronics for the photon detection subsystem
-include a baseline \fixme{} design with several options that remain R\&D
+include a reference design with several options that remain R\&D
 activities.  There alternative implementations of electronics are
 described in Section~\ref{sec_alt}.
 %These options are identified in the description that follows.  
 %There are also some alternative implementations of electronics that remain under consideration.  These are described in Section~\ref{sec_alt}
 %These are described in Section 6.4.
 
-In the baseline \fixme{} plan, there are no front-end electronics in the cold
+In the reference design there are no front-end electronics in the cold
 volume.  Instead, the unamplified signals from the SiPMs are
 transmitted to outside the cryostat on cables for processing and
-digitization, as shown in Figure~\ref{fig:fig-e-1}.  There are
-advantages and disadvantages to this approach.  The advantages are
-that the infrastructure required for inside the cryostat is reduced
-(power, data cables, precision clocks, data protocols, etc.);
-reliability is improved (no single-point failures of multi-channel
-devices inside the cryostat); serviceability and accessibility to the
-front-end electronics are improved; and the need to develop cold
-electronics, possibly a custom ASIC, is eliminated.  The disadvantages
-are that the cable plant inside the detector is increased, which can
-create mechanical challenges and installation difficulties; the flange
-board (warm/cold interface) is more complex; there are generally more
-connectors in the system; and signal-to-noise considerations are more
-difficult.  %Generally, t
-The baseline  \fixme{} design favors simplicity,
-reliability and reduced R\&D time and costs, and also meets the
-performance requirements of the electronics.
-%
-\fixme{No fig1 exists for: Block diagram of the photon detector signal processing system.  }
-%
-\begin{cdrfigure}[Block diagram of the photon detector signal processing system]{fig-e-1}{Block diagram of the photon detector signal processing system}
-%\includegraphics[angle=0,width=10cm,height=7cm]{fig1}
-\end{cdrfigure}
+digitization. There are advantages and disadvantages to this approach.
+The advantages are that the infrastructure required for inside the
+cryostat is reduced (power, data cables, precision clocks, data
+protocols, etc.); reliability is improved (no single-point failures of
+multi-channel devices inside the cryostat); serviceability and
+accessibility to the front-end electronics are improved; and the need
+to develop cold electronics, possibly a custom ASIC, is eliminated.
+The disadvantages are that the cable plant inside the detector is
+increased, which can create mechanical challenges and installation
+difficulties; the flange board (warm/cold interface) is more complex;
+there are generally more connectors in the system; and signal-to-noise
+considerations are more difficult.  The reference design favors
+simplicity, reliability and reduced R\&D time and costs, and also
+meets the performance requirements of the electronics.
 
-In the 35t prototype, each SiPM signal was \fixme{not `is'?} transmitted on an
+In the 35t prototype, each SiPM signal is transmitted on an
 individual shielded twisted-pair cable fitted with individual
 LEMO-style connectors.  The bias voltage was coupled onto the signal
 cable, using AC-coupling on the receiving end to measure the SiPM
@@ -988,30 +978,30 @@ above, the following ideas are being pursued:
   performance, reliability, mechanical mounting, etc.) would have to
   be considered.
 
-\item Use of multi-conductor, individually shielded pair \fixme{if it's a pair, is it just dual-conductor? This is confusing} cable.  A
+\item Use of multi-conductor, individually shielded pair  cable.  A
   candidate cable containing four individually shielded twisted pairs
   has been identified and tests are in progress.  The cable is in
-  Teflon jacket, which should be \fixme{has been found to be?} acceptable for use in LAr.
+  Teflon jacket, which has been found to be acceptable for use in LAr.
 
 \item Use of mass-terminated connectors.  Several candidate connectors
   for use with the cable described above are being pursued.
 \end{itemize}
 
-The baseline  \fixme{} plan assumes that three SiPM signals \fixme{outputs?} can be ganged
+The reference design assumes that three SiPM signals can be ganged
 together into one readout channel.  By using the multi-conductor cable
 with four twisted pairs, this results in one cable per PD consisting
-of 12 SiPMs.  The diameter of this cable is ~xxx-mm, \fixme{get number} which reduces the
-cable plant by $\sim \times$10 compared to that used in the 35t
-detector.  The cost of the connectors also decreases by $\sim \times$10.
-Lastly, the ease in making connections at the flange board will be
-improved by the use of a mass-terminated connector.
+of 12 SiPMs.  The use of this cable will reduce the cable plant by
+$\sim \times$10 compared to that used in the 35t detector.  The cost
+of the connectors also decreases by $\sim \times$10.  Lastly, the ease
+in making connections at the flange board will be improved by the use
+of a mass-terminated connector.
 
-In the baseline\fixme{}  plan, the front-end electronics reside outside of the
-cryostat in instrumentation racks.   A
-custom module for receiving SiPM signals has been designed and built, and signal
-processing is being performed in the front-end as preprocessing for trigger and DAQ.  The
-module is called the SiPM Signal Processor (SSP).  An SSP consists of
-12 readout channels packaged in a self-contained 1U module.  Each
+In the reference design, the front-end electronics reside outside of
+the cryostat in instrumentation racks.  A custom module for receiving
+SiPM signals has been designed and built, and signal processing is
+being performed in the front-end as preprocessing for trigger and DAQ.
+The module is called the SiPM Signal Processor (SSP).  An SSP consists
+of 12 readout channels packaged in a self-contained 1U module.  Each
 channel contains a fully differential voltage amplifier and a 14-bit,
 150~MSPS analog-to-digital converter (ADC) that digitizes the
 waveforms received from the SiPMs.  The front-end amplifier is
@@ -1031,7 +1021,8 @@ incorporates a leading-edge discriminator for detecting events and a
 constant fraction discriminator (CFD) for sub-clock timing resolution.
 Because the FPGA is programmable and accessible, it is possible to
 explore different data processing algorithms and techniques, and even
-customize the readout for a given type of event (e.g., supernova).  A picture of the module is shown in Figure~\ref{fig:fig-e-2}.
+customize the readout for a given type of event (e.g., supernova).  A
+picture of the module is shown in Figure~\ref{fig:fig-e-2}. 
 A block diagram of the system is shown in Figure~\ref{fig:fig-e-3}.
 
 %Figure xx3.  Picture of the SSP module.
@@ -1054,103 +1045,94 @@ truncate or completely suppress the overlapping waveform.  Pile-up
 events can also be suppressed.
 
 As an alternative to reading full waveforms, the DP can be configured
-to perform a wide variety of data processing algorithms, e.g., measuring amplitude (via several techniques), and %also 
-timing the
-event with respect to a reference clock.  All timing and amplitude
-values are reported in a compact event record.  Each data processing
-channel stores up to 340 event records when not storing waveforms. 
+to perform a wide variety of data processing algorithms, e.g.,
+measuring amplitude (via several techniques), and also timing the event
+with respect to a reference clock.  All timing and amplitude values
+are reported in a compact event record.  Each data processing channel
+stores up to 340 event records when not storing waveforms.
 
-Generally,\fixme{There's that `generally' again!} the SSP performs pipelined processing.  The module has been
-designed to support several different triggering schemes, including
-self-triggering, use of an external trigger, or use of an external gate to
-read out all events within a time window.  In order for the events
-measured in the photon detector to be matched up with the
-corresponding events in the TPC, the front-end electronics attaches a
-timestamp to the data as it is acquired.  The timestamp is unique, and
-has a correspondence with the timestamps in the TPC electronics
-processing.  The timestamp in the SSP is applied to the event data as
-it is digitized, and becomes part of the data as the processing
-proceeds.  In the case where zero-suppression and data sparsification
-are used, the timestamp on accepted data remains intact.  To achieve
-this, the TPC and PD electronics must be synchronized, including
-timestamp counter resets, and a known and stable calibration between
-the corresponding timing resolution of the ADC conversion in the two
-systems \fixme{not full sentence}.  The electronics has been designed to support a full
-interface to the NO$\nu$A timing system, which is the baseline \fixme{} timing
-system for the experimental prototypes.
+In normal operation, The SSP performs pipelined processing.  The
+module has been designed to support several different triggering
+schemes, including self-triggering, use of an external trigger, or use
+of an external gate to read out all events within a time window.  In
+order for the events measured in the photon detector to be matched up
+with the corresponding events in the TPC, the front-end electronics
+attaches a timestamp to the data as it is acquired.  The timestamp is
+unique, and has a correspondence with the timestamps in the TPC
+electronics processing.  The timestamp in the SSP is applied to the
+event data as it is digitized, and becomes part of the data as the
+processing proceeds.  In the case where zero-suppression and data
+sparsification are used, the timestamp on accepted data remains
+intact.  To achieve this, the TPC and PD electronics must be
+synchronized, including timestamp counter resets. A known and
+stable calibration between the corresponding timing resolution of the
+ADC conversion in the two systems must also be achieved.  The
+electronics has been designed to support a full interface to the
+NO$\nu$A timing system, which is the reference timing system
+for the experimental prototypes.
 
-A Xilinx Zynq FPGA, onboard %the 
-a MicroZed system-on-module, \fixme{`the' makes it sound like we've heard of the microzed thing, but we haven't yet} handles the
+A Xilinx Zynq FPGA, onboard a MicroZed system-on-module, handles the
 slow control and event data transfer.  The SSP has two parallel
-communication interfaces, USB 2.0 and 10/100/1000 Ethernet.  The 
+communication interfaces, USB 2.0 and 10/100/1000 Ethernet.  The
 1-Gb/s Ethernet supports full TCP/IP protocol.  The module includes a
-separate 12-bit high-voltage DAC for each channel to provide up to 
-30~V of bias to each SiPM.  The module also features charge injection for
-performing diagnostics and linearity monitoring, and also voltage
-monitoring. \fixme{``The module also features charge injection for
-performing diagnostics, linearity monitoring and voltage
-monitoring. `' or ``The module also features charge injection for
-performing diagnostics and linearity monitoring, and it also features voltage monitoring. `'?}
+separate 12-bit high-voltage DAC for each channel to provide up to
+30~V of bias to each SiPM.  The module also features charge injection
+for performing diagnostics and linearity monitoring, as well as voltage
+monitoring. 
 
-In tests to date, the SSP is capable of measuring single
-photo-electron signals coming from the SiPMs over a cable length of 30~m when the SiPMs are operated at LAr temperature.  The timing
-resolution of the signals has been measured to be better than 3~ns.
-The full-differential signal processing in the front-end circuitry is
-important in achieving this result.
+In tests to date, the SSP has demonstrated the ability to measure
+single photo-electron signals coming from the SiPMs over a cable
+length of 30~m when the SiPMs are operated at LAr temperature.  The
+timing resolution of the signals has been measured to be better than
+3~ns.  The full-differential signal processing in the front-end
+circuitry is important in achieving this result.
  
 The SSP is self-contained in that it receives 60-Hz, 120-V power, and
 has internal linear and DC/DC power supplies for generating the DC
-voltages needed for the instrumentation %, as well as 
-and the bias voltage
+voltages needed for the instrumentation, as well as the bias voltage
 for the SiPMs.  The SSP is packaged in a 1U, rack-mountable
-package. For the 35t prototype, the racks are located near the
-ports on the top of the cryostat.
+package. For the 35t prototype, the racks are located near the ports
+on the top of the cryostat.
 
 \subsection{Alternatives}
 \label{sec_alt}
 
-\fixme{Start with a sentence that says what alternatives this section discusses: CE, pulse-shaping, ASIC...  }
+This section describes alternative designs to the PD system readout
+electronics that had been considered for further study during the
+early stages of PD design. They are included for completeness but are
+no longer being considered. The performance of the SSP has been
+demonstrated to achive well beyond the specifications imposed on the
+design. 
 
 %%%%%%%%%%% CE
 
-In the baseline \fixme{} design of the PD electronics, %the approach was taken to have 
-no electronics are placed inside of the cold volume.  This results in a
-large number of cables and connectors.  Other experiments using liquid
-argon have successfully implemented cold TPC electronics, thereby
-significantly reducing the cable plant that must come through the
-cryostat.  
+In the reference design of the PD electronics, no electronics are
+placed inside of the cold volume.  This results in a large number of
+cables and connectors.  Other experiments using liquid argon have
+successfully implemented cold TPC electronics, thereby significantly
+reducing the cable plant that must come through the cryostat.
 
-%This approach 
-Using cold electronics \fixme{check} has challenges in power distribution, heat
+The use of cold electronics has challenges in power distribution, heat
 dissipation, and the performance of front-end electronics in LAr. To
 address serviceability, the cold electronics might be realized in a
 modular way and situated just below the flange in the cryostat so that
-it can be accessed for repair if needed.  To this end
-the zero suppression will be important to avoid high data rates
-depending on the number of readout channels needed. \fixme{prev sentence unclear. what depends on no. of channels?} %A way to realize
-The cold zero suppression %would be to 
-could be implemented by means of a cold FPGA (or an
-ASIC, yet to be developed).  To date the cold FPGAs have had mixed
-results in tests. 
-
-%An alternative approach would be to perform an ``analog
-%zero suppression'' with a constant-fraction discriminator and then gate
-%the signal and digitize warm, in which case the complication with
-%encoding the particular channel has to be addressed.  
+it can be accessed for repair if needed.  To this end the zero
+suppression will be important to avoid high data rates. To date the
+cold FPGAs have had mixed results in tests.
 
 %%%%%%%%%%% % analog zero suppression option
 
-Performing an ``analog zero suppression'' with a constant-fraction discriminator 
-provides an alternative approach; it would be followed by gating
-the signal and performing warm digitization. This technique would, however, introduce the complication of encoding the particular channel. \fixme{I'm not sure I got this right; I didn't completely understand the orig sentence to begin with} 
+Performing an ``analog zero suppression'' with a constant-fraction
+discriminator provides an alternative approach; it would be followed
+by gating the signal and performing warm digitization. This technique
+would, however, introduce the complication of encoding the particular
+channel.
 %
-The significant
-challenges in this technique include power dissipation, the increased
-possibility of contamination of the LAr, and extended infrastructure
-%requirements 
-that must reside in the cold volume.  %The virtue is that this 
-On the other hand, it can significantly reduce the number of signal penetrations into
-the cold volume.
+The significant challenges in this technique include power
+dissipation, the increased possibility of contamination of the LAr,
+and extended infrastructure that must reside in the cold volume.  On
+the other hand, it can significantly reduce the number of signal
+penetrations into the cold volume.
 
 %%%%%%%%%%%%  Pulse-shaping option
 
@@ -1166,77 +1148,68 @@ the pulse peak can be obtained using slower synchronous sampling, or
 using asynchronous sampling through the use of peak detection and
 constant fraction discrimination.  
 
-In either case, the data can be
-processed by an FPGA using algorithms optimized for the application.
-In particular, assuming that a sufficient number of samples of the shaped pulse are
-obtained, a chi-square comparison of the shape to
-the ideal pulse shape can be used to 
-identify events or determine pulse corruption %, or event identification.  As with direct digitization, the digitization clock
-\fixme{check}
-and a timestamp can be synchronized using an external clock source. The
-data can be read out in a similar manner, using USB 2.0 or 10/100/1000
-Ethernet.  The virtue of this approach is that a slower ADC can be
-used, reducing power consumption, data load and the
-speed of readout links. \fixme{reducing speed of readout links is a virtue?} The technique trades bandwidth for
-shaping, making timing and pile-up issues more important.  This can
-result in making the interpretation of the pulse shape more complex, 
-requiring more 
-than direct digitization.  Generally, the pulse-shaping circuitry is
-also less expensive than the direct digitization technique, assuming
-similar performance requirements.
+In either case, the data can be processed by an FPGA using algorithms
+optimized for the application.  In particular, assuming that a
+sufficient number of samples of the shaped pulse are obtained, a
+chi-square comparison of the shape to the ideal pulse shape can be
+used to identify events or determine pulse corruption identification.
+As with direct digitization, the digitization clock and a timestamp
+can be synchronized using an external clock source. The data can be
+read out in a similar manner, using USB 2.0 or 10/100/1000 Ethernet.
+The virtue of this approach is that a slower ADC can be used, reducing
+power consumption, data load and the speed of readout links. The
+technique trades bandwidth for shaping, making timing and pile-up
+issues more important.  This can result in making the interpretation
+of the pulse shape more complex, requiring more than direct
+digitization.  Generally, the pulse-shaping circuitry is less
+expensive than the direct digitization technique, assuming similar
+performance requirements.
 
 %%%%%%%%%%%%  ASIC option
-Another option for the photon system readout would include the use 
-of an Application Specific Integrated circuit (ASIC) as a way to
-reduce cost.  The large channel count in a real detector system is
-such that the production cost of the system could be greatly reduced. \fixme{how does large channel count relate to reduction in cost? }
-Often, the cost of development of an ASIC from scratch is quite high,
-of order $\sim$400K\$, and can take $\sim$1 to 2 years for development, so cost
-and schedule must be weighed carefully.  However, other benefits from
-the ASIC approach include reduced space requirements for circuitry on
-the front-end, lower power dissipation, and specialized functionality
-in the front-end chip.  
+Another option for the photon system readout would include the use of
+an Application Specific Integrated circuit (ASIC) as a way to reduce
+cost.  The large channel count in a real detector system is such that
+the production cost (per channel) of the system could be greatly
+reduced. Often, the cost of development of an ASIC from scratch is
+quite high, of order $\sim$400K\$, and can take $\sim$1 to 2 years for
+development, so cost and schedule must be weighed carefully.  However,
+other benefits from the ASIC approach include reduced space
+requirements for circuitry on the front-end, lower power dissipation,
+and specialized functionality in the front-end chip.
 
-Several ASICs have been
-designed over the last few years %especially 
-for SiPM readout.  %One could potentially 
-It would be possible to explore the functionality and performance of these
-designs, for either for warm or cold electronics, and evaluate their suitability for LBNE.  %This option might be used either for warm or cold electronics.  
-Direct digitization has
-the virtue of being straight-forward from a circuit design
-perspective.\fixme{connect direct digitization with ASIC}  By taking advantage of modern high-bandwidth OP amps,
-high-speed, high-rate ADCs, and powerful FPGAs with high-speed serial
-links, it is possible to obtain 14-bit dynamic range digitization with
-$\sim$1-ns timing resolution.  By reading all of the samples into an
-FPGA having a deep buffer, digital signal processing techniques can be
-employed using the programmable logic; this could make it possible
-to develop powerful analysis
-algorithms %that can be developed 
-in time.  The technique generally has
-higher power consumption and tends to be more expensive than simpler
+Several ASICs have been designed over the last few years for SiPM
+readout.  It could be possible to explore the functionality and
+performance of these designs, for either for warm or cold electronics,
+and evaluate their suitability for LBNE. This option might be used
+either for warm or cold electronics.  Direct digitization has the
+virtue of being straight-forward from a circuit design perspective. By
+taking advantage of modern high-bandwidth OP amps, high-speed,
+high-rate ADCs, and powerful FPGAs with high-speed serial links, it is
+possible to obtain 14-bit dynamic range digitization with $\sim$1-ns
+timing resolution.  By reading all of the samples into an FPGA having
+a deep buffer, digital signal processing techniques can be employed
+using the programmable logic; this could make it possible to develop
+powerful analysis algorithms. The technique generally has higher power
+consumption and tends to be more expensive than simpler
 instrumentation techniques.
 
 \section{Photon Detector Calibration}
 \label{sec_pd_calib}
 
 The photon detector calibration is a part of a larger calibration plan
-that covers all aspects of a LArTPC detector calibration. The larger plan
- includes
-methods to convert collected charge to initial particle energy, as
-well as calibration techniques to convert collected scintillation
-light into an estimate of a particle's interaction time, energy and a
-track/vertex location for each event.  
+that covers all aspects of a LArTPC detector calibration. The larger
+plan includes methods to convert collected charge to initial particle
+energy, as well as calibration techniques to convert collected
+scintillation light into an estimate of a particle's interaction time,
+energy and a track/vertex location for each event.
 
-As already described, the
-baseline \fixme{} for the scintillation photon detectors assumes employment of
-acrylic light collection paddles to reduce the required costly
-photo-cathode area. Several photon detector designs are presently
-being developed and are being tested in small dewars. Since %each 
-none of
-these new elements has %not 
-yet been tested in a large-scale TPC, the
-35t LArTPC prototype is being constructed to provide essential
-design validation. 
+As already described, the reference design for the scintillation
+photon detectors assumes employment of acrylic light collection
+paddles to reduce the required costly photo-cathode area. Several
+photon detector designs are presently being developed and are being
+tested in small dewars. Since %each none of these new elements has
+%not yet been tested in a large-scale TPC, the 35t LArTPC prototype is
+being constructed to provide essential design validation.
 
 The current FD designs are anticipated to have
 sufficient sensitivity to provide event timing information for
@@ -1376,7 +1349,6 @@ diffusers at once.
 \includegraphics[angle=0,width=6.5cm,height=3.5cm]{fig-c-4-L.png}
 \includegraphics[angle=0,width=6.5cm,height=3.5cm]{fig-c-4-R.png}
 \end{cdrfigure}
-
 
 In the LBNE prototypes (i.e., the 35t) and in %Future 
 the far detector it
