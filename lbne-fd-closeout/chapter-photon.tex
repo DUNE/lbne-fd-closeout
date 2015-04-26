@@ -1207,77 +1207,70 @@ As already described, the reference design for the scintillation
 photon detectors assumes employment of acrylic light collection
 paddles to reduce the required costly photo-cathode area. Several
 photon detector designs are presently being developed and are being
-tested in small dewars. Since %each none of these new elements has
-%not yet been tested in a large-scale TPC, the 35t LArTPC prototype is
-being constructed to provide essential design validation.
+tested in various dewars. Since none of these new elements has been
+tested in a large-scale TPC, the 35t LArTPC prototype is being
+constructed to provide essential design validation.
 
-The current FD designs are anticipated to have
-sufficient sensitivity to provide event timing information for
-atmospheric neutrino and proton decay channels. However, it will not
-provide high efficiency down to the 5-MeV neutrino energy level
-desired by the supernova program. %This would have the impact that the
-This would cause the supernova event reconstruction energy resolution to be 20\% compared to the 5\%
-achievable with %the event time determination from 
-a photon detector
-able to operate efficiently at a sufficiently low energy
-threshold. The improvement in physics will be studied in the near
+The current FD designs are anticipated to have sufficient sensitivity
+to provide event timing information for atmospheric neutrino and
+proton decay channels. However, it will not provide high efficiency
+down to the 20-MeV neutrino energy level desired by the supernova
+program. This would have the impact that the supernova event
+reconstruction energy resolution would be 20\% compared to the 8\%
+achievable with the event time determination from a photon
+detector. The improvement in physics will be studied in the near
 future but a substantial effort in development of improved detection
-techniques is desired. 
+techniques is desired.
 
 In the absence of precise physics requirements
 for the photon detector system and in order to support R\&D activities
 on the photon detector development it was decided that the photon
 detector should provide a time stamp to determine the time of
-occurrence of an event (so called ``time zero'') with an accuracy much
-better than 1~s \fixme{fix}.  
+occurrence of an event (so called ``time zero'') with an accuracy
+better than 1~$\mu$s.  
 
-Items relevant to the photon detector calibration
-are the fast and slow components of the light, photon propagation
-including scattering and reflections, impact of N2, \fixme{what's N2?} E-field strength,
-and the energy range of interest. A calibration system that
-addresses the issues listed above has to be both comprehensive and
-cost-effective, and has to be tied to the overall calibration system
-that includes both charge and scintillation-light calibration
-techniques. Such a system will be designed in the future.  \fixme{`is planned...'?}
+Items relevant to the photon detector calibration are the fast and
+slow components of the light, photon propagation including scattering
+and reflections, impact of LN2, E-field strength, and the energy range
+of interest. A calibration system that addresses the issues listed
+above has to be both comprehensive and cost-effective, and has to be
+tied to the overall calibration system that includes both charge and
+scintillation-light calibration techniques. Such a system is planned
+for the future.
 
-To support
-the PD R\&D phase a light-flasher-based calibration system
-has been designed
-that will serve to monitor the relative performance and time
-resolution of the system. In particular, for the anticipated 35t
-performance tests the relative efficiencies of
-multiple light collection techniques must be evaluated in order to 
-%be able to
+To support the PD R\&D phase a light-flasher-based calibration system
+has been designed that will serve to monitor the relative performance
+and time resolution of the system. In particular, for the anticipated
+35t performance tests the relative efficiencies of multiple light
+collection techniques must be evaluated in order to be able to
 down-select an optimal light-readout technology. The system that meets
 these requirements will consist of a set of LEDs as light sources or a
 laser with a VUV wavelength coupled to quartz fibers, thus
 transmitting light from outside the detector volume to desired
-locations at the CPA within a TPC. Therefore the 35t
-detector will be equipped with LEDs located and fired externally, with fibers running
+locations at the CPA within a TPC. Therefore the 35t detector will be
+equipped with LEDs located and fired externally, with fibers running
 into the cryostat to diffusers that will emit light from the CPA to
-the APA. 
+the APA.
 
-%For the 35t cryostat at the surface at Fermilab it will be
-%complementary to cosmic ray muon tracks as means of calibration. 
-For the 35t cryostat, installed at the surface at Fermilab,  a light-flasher-based calibration system will be
-complementary to calibration by cosmic-ray muon tracks.
+For the 35t cryostat, installed at the surface at Fermilab, a
+light-flasher-based calibration system will be complementary to
+calibration by cosmic-ray muon tracks.
 
-%In terms of light sources t
-The \fixme{35t calibration?} measurements should be performed with an UV
+The 35t calibration measurements should be performed with an UV
 (245-375nm) light source. The UV light mimics physics starting from
-the wavelength shifter conversion, through the light guide propagation,
-photo-sensor detection and FEE readout.  The external light-flasher
-calibration system is designed such that it:
+the wavelength shifter conversion, through the light guide
+propagation, photo-sensor detection and FEE readout.  The external
+light-flasher calibration system is designed such that it:
 \begin{itemize}
 \item is simple to implement (has no active components within PD/APA, such as
   LEDs or fibers mounted within APA).
-\item is less-intrusive (less fiber material is within detector %in terms of fibers 
-than if each PD frame were equipped with individual fiber).
+\item is less-intrusive (less fiber material is within the detector
+  than if each PD frame were equipped with individual fiber).
   \item
   provides a benchmark light-based reconstruction with the use of
   localized light sources distributed throughout the detector volume.
 \item has the potential to be adapted for deployment in a large far
-  detector% in the future
+  detector in the future
 \end{itemize}
 
 Figure~\ref{fig:fig-c-1} illustrates the system. It
@@ -1303,7 +1296,6 @@ to the CPA corners, as shown in Figure~\ref{fig:fig-c-2}.
 \includegraphics[angle=0,width=10cm,height=7cm]{fig-c-2.png}
 \end{cdrfigure}
 
-
 The PDCM module layout is shown in Figure~\ref{fig:fig-c-3}. The ANL
 photon calibration module is based on a repurposed SSP unit.  An SSP
 board will be repackaged into a deeper rack mount chassis that will
@@ -1323,25 +1315,24 @@ to the calibration pulse
 \includegraphics[angle=0,width=.8\textwidth]{fig-c-3.png}
 \end{cdrfigure}
 
-
-%For the 280~nm light we have performed a simulation of 
-The designed
-diffuse-light calibration system has been performed with 280-nm light using TracePro, a generalized 3D
-light ray-tracing program with the ability to include bulk optical
-properties such as absorption, fluorescence and birefringence in addition
-to surface properties such as scattering and
-reflection. Figure~\ref{fig:fig-c-4} shows simulated light distributions
-of the 35t APA for the cases of the VUV light emitted by either
-the central diffuser only (left figure), or by the outer four diffusers
-simultaneously (right figure). A full Geant4-based simulation of the
-detector will be used in the future. Using the preliminary data with
-the 35t-style light guides (indicating 0.5\% efficiency for number
-of photo-electrons per incident 128-nm LAr scintillation photon 50~cm
-from the light guide), we estimate for 280-nm light to observe $\sim$15
-photo-electrons per single SiPM channel when the light is emitted from
-the single central diffuser in 13-ns-long pulses. Similarly, we expect
-$\sim$100 photo-electrons observed by a single SiPM channel when 280-nm light is emitted in 100-ns-long pulses from the four outer
-diffusers at once.
+For the 280~nm light we have performed a simulation of the designed
+diffuse-light calibration system has been performed using TracePro, a
+generalized 3D light ray-tracing program with the ability to include
+bulk optical properties such as absorption, fluorescence and
+birefringence in addition to surface properties such as scattering and
+reflection. Figure~\ref{fig:fig-c-4} shows simulated light
+distributions of the 35t APA for the cases of the VUV light emitted by
+either the central diffuser only (left figure), or by the outer four
+diffusers simultaneously (right figure). A full Geant4-based
+simulation of the detector will be used in the future. Using the
+preliminary data with the 35t-style light guides (indicating 0.5\%
+efficiency for number of photo-electrons per incident 128-nm LAr
+scintillation photon 50~cm from the light guide), we estimate for
+280-nm light to observe $\sim$15 photo-electrons per single SiPM
+channel when the light is emitted from the single central diffuser in
+13-ns-long pulses. Similarly, we expect $\sim$100 photo-electrons
+observed by a single SiPM channel when 280-nm light is emitted in
+100-ns-long pulses from the four outer diffusers at once.
 
 %
 \begin{cdrfigure}[Simulated light distributions of the 35t APA, two cases]{fig-c-4}{Simulated light distributions of the 35t APA for the cases of the VUV light emitted by either the central diffuser only
@@ -1350,25 +1341,24 @@ diffusers at once.
 \includegraphics[angle=0,width=6.5cm,height=3.5cm]{fig-c-4-R.png}
 \end{cdrfigure}
 
-In the LBNE prototypes (i.e., the 35t) and in %Future 
-the far detector it
+In the LBNE prototypes (i.e., the 35t) and in future far detector it
 will be important to check that photon-detector components are
 functioning properly at various stages of the detector
 operation. Periodic light-source deployments will monitor the system's
-stability as a function of time. A change in the relative difference of UV
-light responses will point towards potential wavelength-shifter
-instability, changes in SiPM gain and collection efficiencies. It is expected that much of
-the same monitoring %is expected to be doable 
-can be done with cosmic rays in the
-35t (at the surface) using periodic LED/laser calibration runs
-complemented with cosmic-ray data tracked with an external
-hodoscope. \fixme{that's a mouthful} With the 35t detector one could use a well-defined muon
-trajectory defined by the hodoscope geometry and monitor the number of
-p.e.'s per MeV of deposited charge. The number of p.e.'s per PD channel from
-the %well-defined 
-muon track could be used as a calibration
-constant. However, for the deep underground detector the cosmic-ray flux
-may be inadequate for timely monitoring of the photon detectors.  Two sets of calibration runs are planned for the 35t detector:
+stability as a function of time. A change in the relative difference
+of UV light responses will point towards potential wavelength-shifter
+instability, changes in SiPM gain and collection efficiencies. It is
+expected that much of the same monitoring can be perfomed with cosmic
+rays in the 35t (at the surface) using periodic LED/laser calibration
+runs complemented with cosmic-ray data tracked with an external
+hodoscope. \fixme{that's a mouthful} With the 35t detector one could
+use a well-defined muon trajectory defined by the hodoscope geometry
+and monitor the number of p.e.'s per MeV of deposited charge. The
+number of p.e.'s per PD channel from a well-defined muon track can be
+used as a calibration constant. However, for the deep underground
+detector the cosmic-ray flux may be inadequate for timely monitoring
+of the photon detectors.  Two sets of calibration runs are planned for
+the 35t detector:
 \begin{enumerate}
 \item Calibration runs with four outer diffusers running simultaneously,
   in order to\\ -measure response of PD channels in multi-p.e. range and
@@ -1403,24 +1393,24 @@ and granularity required for improved position resolution. As in the
 case with the TPC charge calibration we will need to evaluate what may
 be achieved with expected cosmic-ray muons and Michels, $\pi^0$, and
 natural radioactivity events (such as $^{39}$Ar with end-point energy
-of abut 500 keV).
+of about 500 keV).
 
 \section{Installation}
 
 Installation of the photon detectors is one of the most significant
-factors driving the mechanical design.  As discussed above,\fixme{give section} the
-initial thought was to install the PDs and run the SiPM twisted-pair
-cable down the frame side tube prior to wire-wrapping the APA.
-After experience with the environmental controls (primarily UV
-filtered light) required by the PDs, as well as the difficulties in
-dealing with the PD readout cable ends during wire-wrapping, it was
-decided to change the baseline \fixme{} %to include inserting 
-such that the PDs would be inserted after
-wire wrapping is complete.  In addition to relaxing the physical constraints on
-the wire wrapping, this also relaxes a schedule connection between the
-APA and PD fabrication.  It is not necessary to install the PDs into
-the APA frames until shortly prior to installation of the APAs into
-the cryostat.
+factors driving the mechanical design.  As discussed in the
+section~\ref{MECH_SECTION} the initial approach was to install the PDs
+and run the SiPM twisted-pair cable down the frame side tube prior to
+wire-wrapping the APA.  After experience with the environmental
+controls (primarily UV filtered light) required by the PDs, as well as
+the difficulties in dealing with the PD readout cable ends during
+wire-wrapping, it was decided to change the reference design to
+include inserting such that the PDs would be inserted after wire
+wrapping is complete.  In addition to relaxing the physical
+constraints on the wire wrapping, this also relaxes a schedule
+connection between the APA and PD fabrication.  It is not necessary to
+install the PDs into the APA frames until shortly prior to
+installation of the APAs into the cryostat.
 
 As noted above, and shown in Figure~\ref{fig:5.5-4}, a total of 10 PDs are
 installed into each APA frame, with five coming in from each side.  The
@@ -1429,7 +1419,7 @@ on an insertion station table.  Prior to installation, the PD cable
 bundle will be inserted into the APA side tubes.  The cable bundle
 will be pre-assembled prior to installation such that the end of each
 cable will terminate at the correct slot for the PD to be connected.
-Our baseline \fixme{} cable design has also been modified to a single cable
+Our reference cable design has also been modified to a single cable
 with four individual twisted pairs in a single jacket, so each APA side
 tube will only require 15 cables (three per PD, 30 per APA).  These cables
 extend approximately 30~cm past the end of the APA tubes at the cold
