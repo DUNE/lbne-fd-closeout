@@ -90,8 +90,7 @@ in table~\ref{Table-Eff}.
 \begin{cdrtable}[Individual photon collection efficiencies]{clcl}{example}
 {Individual photon collection efficiencies}
  Factor & Description & Value & Comments \\ \toprowrule
-   $\epsilon_{geom}$ & geometric acceptance & 0.0036 & historical
-      average  \\ \colhline
+   $\epsilon_{geom}$ & geometric acceptance & 0.0023 & FD optical simulation  \\ \colhline
       $\epsilon_{E}$ & field correction & 0.6 & 500~V/cm  \\ \colhline
       $\epsilon_{mesh}$ & TPC wire shadowing & .83 (30-150$^{\circ}$)
       & falls off sharply~\cite{HimmelMesh}  \\ \colhline
@@ -128,9 +127,9 @@ shows the probability of energy deposition from MIPs being
 detected in the photon detectors.
 
 \begin{cdrfigure}[Probability of photon being detected in
-  detectors when depositing energy]{photon_map}{Photon map giving the probability of photon being 
-  detected in the photon detectors when depositing energy at map location.}
-  \includegraphics[width=0.4\textwidth]{35t_map.jpg}
+  detectors when depositing energy]{photon_map}{Photon map giving the number of photons expected per MeV deposited energy accounting for the efficiencies listed in table~\ref{example}}
+  \includegraphics[width=0.4\textwidth]{projX50_phperMeV.png}
+  \includegraphics[width=0.4\textwidth]{projZ35_phperMeV.png}
 \end{cdrfigure}
 
 The TPC wire mesh shadowing is also quite location-dependent as photon
