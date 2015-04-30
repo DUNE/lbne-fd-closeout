@@ -18,3 +18,7 @@ tests/tables.pdf
 *.brf
 *.tdo
 lbne-fd-closeout.pdf
+.lock-waf*
+.waf-*
+build
+install
