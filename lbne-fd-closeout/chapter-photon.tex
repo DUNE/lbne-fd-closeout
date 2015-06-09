@@ -90,41 +90,45 @@ in table~\ref{Table-Eff}.
 \begin{cdrtable}[Individual photon collection efficiencies]{clcl}{example}
 {Individual photon collection efficiencies}
  Factor & Description & Value & Comments \\ \toprowrule
-   $\epsilon_{geom}$ & geometric acceptance & 0.0023 & FD optical simulation  \\ \colhline
+   $\epsilon_{geom}$ & geometric acceptance & 0.0047 & FD optical simulation  \\ \colhline
       $\epsilon_{E}$ & field correction & 0.6 & 500~V/cm  \\ \colhline
-      $\epsilon_{mesh}$ & TPC wire shadowing & .83 (30-150$^{\circ}$)
-      & falls off sharply~\cite{HimmelMesh}  \\ \colhline
+      $\epsilon_{mesh}$ & TPC wire shadowing & .70
+      & average value  \\ \colhline
       $\epsilon_{conv}$ & TPB conversion & 1 & see
       ref.~\cite{bib:gehman}  \\ \colhline
-      $\epsilon_{capt}$ & waveguide incident & 0.5 & about half
+      $\epsilon_{capt}$ & & 0.5 & about half
       converted photons\\ 
       &  & & travel into waveguide  \\ \colhline
-      $\epsilon_{tran}$ & waveguide transmission & TBD  & prototype
+      $\epsilon_{tran}$ & waveguide transmission & 0.0005 - 0.0078 & prototype
       dependent  \\ \colhline
      $\epsilon_{QE}$ & SiPM QE & .41  & SensL C-series  \\
 \end{cdrtable}
 
-Using Equation~\ref{eff_eqn}, and only looking at the prompt photons
-for a 20~MeV electron, it is seen that to detect a 2~p.e. signal,
-which is likely to be discriminated from noise, the required transport
-efficiency is 5.7\%. Of course this value is very position-dependent,
-as the geometric acceptance, wire shadowing and transport corrections
-all depend on the location of the event. It is also expected that
-there will be a thousand or so events in 10 kt during the SN burst
-neutrino arrival and hence detection efficiency may be higher due to
-the increase in number of photons - although for triggering the
-leading edge of neutrino arrivals is most important. 
+Based on simulations of photon transport and the efficiency factors
+listed in Table 5.1, and using only the prompt light, the best
+prototypes yet designed are capable of seeing proton decay with good
+efficiency (~95\% across the full volume) and supernova events down to
+10 MeV with some efficiency (~30\% for a 5 MeV~electron).  Of course
+this value is very position-dependent, as the geometric acceptance,
+wire shadowing and transport corrections all depend on the location of
+the event. It is also expected that there will be a thousand or so
+events in 10 kt during the SN burst neutrino arrival and hence
+detection efficiency may be higher due to the increase in number of
+photons - although for triggering the leading edge of neutrino
+arrivals is most important.
 
 An additional possibility is to utilize the delayed photons to
 increase the number of collected photons and effectively reduce the
 detection energy. As the delayed photons are typically detected as
 single photo-electrons due to the spread over time it is important to
-understand the contrinution of backgrounds coming from SiPM dark rate
-and $^{39}$Ar during the integration window.   
+understand the contribution of backgrounds coming from SiPM dark rate
+and $^{39}$Ar during the integration window. When late light is
+included, the detection efficiency for proton decay is >99\% even at
+the furthest point from the photon detectors and the efficiency for
+5~MeV electrons rises to about 70\%.
 
-Figure~\ref{fig:photon_map}
-shows the probability of energy deposition from MIPs being
-detected in the photon detectors.
+Figure~\ref{fig:photon_map} shows the probability of energy deposition
+from MIPs being detected in the photon detectors.
 
 \begin{cdrfigure}[Probability of photon being detected in
   detectors when depositing energy]{photon_map}{Photon map giving the
